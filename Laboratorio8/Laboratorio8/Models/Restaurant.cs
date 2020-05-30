@@ -8,6 +8,25 @@ namespace Laboratorio8.Clases
 {
     public class Restaurant
     {
+        string nombre_dueño;
+        string identificador;
+        string horario_inicio;
+        string horario_cierre;
+        string exclusividad;
 
+        public Restaurant(string nombre_dueño, string identificador, string horario_inicio, string horario_cierre, string exclusividad)
+        {
+            this.nombre_dueño = nombre_dueño;
+            this.identificador = identificador;
+            this.horario_inicio = horario_inicio;
+            this.horario_cierre = horario_cierre;
+            this.exclusividad = exclusividad;
+        }
+
+        public string Nombre_dueño { get => nombre_dueño; set => nombre_dueño = value; }
+        public string Identificador { get => identificador; set => identificador = value; }
+        public string Horario_inicio { get => horario_inicio; set => horario_inicio = value; }
+        public string Horario_cierre { get => horario_cierre; set => horario_cierre = value; }
+        public string Exclusividad { get => exclusividad; set => exclusividad = value; }
     }
 }

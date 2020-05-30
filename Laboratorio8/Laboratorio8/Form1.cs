@@ -14,10 +14,13 @@ namespace Laboratorio8
     public partial class Form1 : Form
 
     {
-        //Evento para enviar cine
+        //Evento para crear cine
         public event EventHandler<SendingCineEventArgs> CineSended;
-        //Evento para mandar recreacional
+        //Evento para crear recreacional
         public event EventHandler<SendingrecreacionalEventArgs> RecreacionalSended;
+        //Evento para crear restaurant
+        public event EventHandler<SendingRestaurantEventArgs> RestaurantSended;
+
 
 
 
@@ -78,6 +81,11 @@ namespace Laboratorio8
               
              
             }
+            else if (opcion == "Restaurant")
+            {
+                Panelrestaurant.Visible = true;
+                Paneldeopciones.Visible = false;
+            }
 
         }
 
@@ -111,6 +119,21 @@ namespace Laboratorio8
 
             }
             
+        }
+
+        private void Crearrestaurantbtn_Click(object sender, EventArgs e)
+        {
+            string nombreduenorestaurant = Nombreduenorestauranttxt.Text;
+            string identificadorrestaurant = Identificadorrestauranttxt.Text;
+            string horarioiniciorestaurant = Horarioiniciorestauranttxt.Text;
+            string horariocierrerestaurant = Horariocierrerestauranttxt.Text;
+            string exclusividad =Convert.ToString( this.Incluirmesasexclusivascombobox.SelectedItem);
+            if (RestaurantSended != null)
+            {
+                RestaurantSended(this, new SendingRestaurantEventArgs() { Nombreduenoenviado = nombreduenorestaurant, Identificadorenviado = identificadorrestaurant, Horarioinicioenviado = horarioiniciorestaurant, Horariocierreenviado = horariocierrerestaurant, Exlusividadenviado = exclusividad });
+                MessageBox.Show("Restaurant creado");
+                Panelrestaurant.Visible = false;
+            }
         }
     }
 }

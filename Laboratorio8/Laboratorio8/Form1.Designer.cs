@@ -29,6 +29,18 @@
         private void InitializeComponent()
         {
             this.Panelinicio = new System.Windows.Forms.Panel();
+            this.Panelrestaurant = new System.Windows.Forms.Panel();
+            this.Incluirmesasexclusivascombobox = new System.Windows.Forms.ComboBox();
+            this.Incluirmesasexclusivaslabel = new System.Windows.Forms.Label();
+            this.Horariocierrerestauranttxt = new System.Windows.Forms.TextBox();
+            this.Horariocierrerestaurantlabel = new System.Windows.Forms.Label();
+            this.Horarioiniciorestaurantlabel = new System.Windows.Forms.Label();
+            this.Horarioiniciorestauranttxt = new System.Windows.Forms.TextBox();
+            this.Identificadorrestauranttxt = new System.Windows.Forms.TextBox();
+            this.Identificadorrestaurantlabel = new System.Windows.Forms.Label();
+            this.Nombreduenorestauranttxt = new System.Windows.Forms.TextBox();
+            this.Dunorestaurantlabel = new System.Windows.Forms.Label();
+            this.Panelrecreacional = new System.Windows.Forms.Panel();
             this.Panelcine = new System.Windows.Forms.Panel();
             this.Crearcinebtn = new System.Windows.Forms.Button();
             this.Numerodesalastxt = new System.Windows.Forms.TextBox();
@@ -41,14 +53,6 @@
             this.Horarioiniciocinelabel = new System.Windows.Forms.Label();
             this.Identificadorlabelcine = new System.Windows.Forms.Label();
             this.Nombreduenolabel = new System.Windows.Forms.Label();
-            this.Paneldeopciones = new System.Windows.Forms.Panel();
-            this.Enviaropcionbtn = new System.Windows.Forms.Button();
-            this.Labelcomboxopciones = new System.Windows.Forms.Label();
-            this.Comboxopciones = new System.Windows.Forms.ComboBox();
-            this.Agregarlocalbtn = new System.Windows.Forms.Button();
-            this.Revisarlocalbtn = new System.Windows.Forms.Button();
-            this.Verlocalesexistentesbtn = new System.Windows.Forms.Button();
-            this.Panelrecreacional = new System.Windows.Forms.Panel();
             this.Nombreduenorecreacionallabel = new System.Windows.Forms.Label();
             this.Identificadorlabelrecreacional = new System.Windows.Forms.Label();
             this.Horarioiniciorecreacionalabel = new System.Windows.Forms.Label();
@@ -58,15 +62,24 @@
             this.horarioiniciolocalrecreacionaltxt = new System.Windows.Forms.TextBox();
             this.Horariocierrelocalrereacionaltxt = new System.Windows.Forms.TextBox();
             this.Crearlocalrecreacionalbtn = new System.Windows.Forms.Button();
+            this.Paneldeopciones = new System.Windows.Forms.Panel();
+            this.Enviaropcionbtn = new System.Windows.Forms.Button();
+            this.Labelcomboxopciones = new System.Windows.Forms.Label();
+            this.Comboxopciones = new System.Windows.Forms.ComboBox();
+            this.Agregarlocalbtn = new System.Windows.Forms.Button();
+            this.Revisarlocalbtn = new System.Windows.Forms.Button();
+            this.Verlocalesexistentesbtn = new System.Windows.Forms.Button();
+            this.Crearrestaurantbtn = new System.Windows.Forms.Button();
             this.Panelinicio.SuspendLayout();
+            this.Panelrestaurant.SuspendLayout();
+            this.Panelrecreacional.SuspendLayout();
             this.Panelcine.SuspendLayout();
             this.Paneldeopciones.SuspendLayout();
-            this.Panelrecreacional.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panelinicio
             // 
-            this.Panelinicio.Controls.Add(this.Panelrecreacional);
+            this.Panelinicio.Controls.Add(this.Panelrestaurant);
             this.Panelinicio.Controls.Add(this.Paneldeopciones);
             this.Panelinicio.Controls.Add(this.Agregarlocalbtn);
             this.Panelinicio.Controls.Add(this.Revisarlocalbtn);
@@ -76,6 +89,130 @@
             this.Panelinicio.Name = "Panelinicio";
             this.Panelinicio.Size = new System.Drawing.Size(800, 450);
             this.Panelinicio.TabIndex = 0;
+            // 
+            // Panelrestaurant
+            // 
+            this.Panelrestaurant.BackColor = System.Drawing.Color.Lime;
+            this.Panelrestaurant.Controls.Add(this.Panelrecreacional);
+            this.Panelrestaurant.Controls.Add(this.Nombreduenorestauranttxt);
+            this.Panelrestaurant.Controls.Add(this.Identificadorrestauranttxt);
+            this.Panelrestaurant.Controls.Add(this.Horarioiniciorestauranttxt);
+            this.Panelrestaurant.Controls.Add(this.Horariocierrerestauranttxt);
+            this.Panelrestaurant.Controls.Add(this.Incluirmesasexclusivascombobox);
+            this.Panelrestaurant.Controls.Add(this.Dunorestaurantlabel);
+            this.Panelrestaurant.Controls.Add(this.Identificadorrestaurantlabel);
+            this.Panelrestaurant.Controls.Add(this.Horarioiniciorestaurantlabel);
+            this.Panelrestaurant.Controls.Add(this.Horariocierrerestaurantlabel);
+            this.Panelrestaurant.Controls.Add(this.Incluirmesasexclusivaslabel);
+            this.Panelrestaurant.Controls.Add(this.Crearrestaurantbtn);
+            this.Panelrestaurant.Location = new System.Drawing.Point(0, 0);
+            this.Panelrestaurant.Name = "Panelrestaurant";
+            this.Panelrestaurant.Size = new System.Drawing.Size(800, 450);
+            this.Panelrestaurant.TabIndex = 12;
+            this.Panelrestaurant.Visible = false;
+            // 
+            // Incluirmesasexclusivascombobox
+            // 
+            this.Incluirmesasexclusivascombobox.FormattingEnabled = true;
+            this.Incluirmesasexclusivascombobox.Items.AddRange(new object[] {
+            "Si",
+            "No"});
+            this.Incluirmesasexclusivascombobox.Location = new System.Drawing.Point(187, 169);
+            this.Incluirmesasexclusivascombobox.Name = "Incluirmesasexclusivascombobox";
+            this.Incluirmesasexclusivascombobox.Size = new System.Drawing.Size(336, 21);
+            this.Incluirmesasexclusivascombobox.TabIndex = 21;
+            // 
+            // Incluirmesasexclusivaslabel
+            // 
+            this.Incluirmesasexclusivaslabel.AutoSize = true;
+            this.Incluirmesasexclusivaslabel.Location = new System.Drawing.Point(22, 172);
+            this.Incluirmesasexclusivaslabel.Name = "Incluirmesasexclusivaslabel";
+            this.Incluirmesasexclusivaslabel.Size = new System.Drawing.Size(159, 13);
+            this.Incluirmesasexclusivaslabel.TabIndex = 20;
+            this.Incluirmesasexclusivaslabel.Text = "Desea incluir mesas exclusivas?";
+            // 
+            // Horariocierrerestauranttxt
+            // 
+            this.Horariocierrerestauranttxt.Location = new System.Drawing.Point(158, 125);
+            this.Horariocierrerestauranttxt.Name = "Horariocierrerestauranttxt";
+            this.Horariocierrerestauranttxt.Size = new System.Drawing.Size(365, 20);
+            this.Horariocierrerestauranttxt.TabIndex = 19;
+            // 
+            // Horariocierrerestaurantlabel
+            // 
+            this.Horariocierrerestaurantlabel.AutoSize = true;
+            this.Horariocierrerestaurantlabel.Location = new System.Drawing.Point(22, 132);
+            this.Horariocierrerestaurantlabel.Name = "Horariocierrerestaurantlabel";
+            this.Horariocierrerestaurantlabel.Size = new System.Drawing.Size(126, 13);
+            this.Horariocierrerestaurantlabel.TabIndex = 18;
+            this.Horariocierrerestaurantlabel.Text = "Horario cierre restaurant :";
+            // 
+            // Horarioiniciorestaurantlabel
+            // 
+            this.Horarioiniciorestaurantlabel.AutoSize = true;
+            this.Horarioiniciorestaurantlabel.Location = new System.Drawing.Point(22, 94);
+            this.Horarioiniciorestaurantlabel.Name = "Horarioiniciorestaurantlabel";
+            this.Horarioiniciorestaurantlabel.Size = new System.Drawing.Size(118, 13);
+            this.Horarioiniciorestaurantlabel.TabIndex = 17;
+            this.Horarioiniciorestaurantlabel.Text = "Horario inicio restaurant";
+            // 
+            // Horarioiniciorestauranttxt
+            // 
+            this.Horarioiniciorestauranttxt.Location = new System.Drawing.Point(158, 87);
+            this.Horarioiniciorestauranttxt.Name = "Horarioiniciorestauranttxt";
+            this.Horarioiniciorestauranttxt.Size = new System.Drawing.Size(365, 20);
+            this.Horarioiniciorestauranttxt.TabIndex = 16;
+            // 
+            // Identificadorrestauranttxt
+            // 
+            this.Identificadorrestauranttxt.Location = new System.Drawing.Point(158, 56);
+            this.Identificadorrestauranttxt.Name = "Identificadorrestauranttxt";
+            this.Identificadorrestauranttxt.Size = new System.Drawing.Size(365, 20);
+            this.Identificadorrestauranttxt.TabIndex = 15;
+            // 
+            // Identificadorrestaurantlabel
+            // 
+            this.Identificadorrestaurantlabel.AutoSize = true;
+            this.Identificadorrestaurantlabel.Location = new System.Drawing.Point(22, 63);
+            this.Identificadorrestaurantlabel.Name = "Identificadorrestaurantlabel";
+            this.Identificadorrestaurantlabel.Size = new System.Drawing.Size(121, 13);
+            this.Identificadorrestaurantlabel.TabIndex = 14;
+            this.Identificadorrestaurantlabel.Text = "Identificador restaurant :";
+            // 
+            // Nombreduenorestauranttxt
+            // 
+            this.Nombreduenorestauranttxt.Location = new System.Drawing.Point(158, 27);
+            this.Nombreduenorestauranttxt.Name = "Nombreduenorestauranttxt";
+            this.Nombreduenorestauranttxt.Size = new System.Drawing.Size(365, 20);
+            this.Nombreduenorestauranttxt.TabIndex = 13;
+            // 
+            // Dunorestaurantlabel
+            // 
+            this.Dunorestaurantlabel.AutoSize = true;
+            this.Dunorestaurantlabel.Location = new System.Drawing.Point(22, 30);
+            this.Dunorestaurantlabel.Name = "Dunorestaurantlabel";
+            this.Dunorestaurantlabel.Size = new System.Drawing.Size(133, 13);
+            this.Dunorestaurantlabel.TabIndex = 12;
+            this.Dunorestaurantlabel.Text = "Nombre dueño restaurant :";
+            // 
+            // Panelrecreacional
+            // 
+            this.Panelrecreacional.BackColor = System.Drawing.Color.Aqua;
+            this.Panelrecreacional.Controls.Add(this.Panelcine);
+            this.Panelrecreacional.Controls.Add(this.Nombreduenorecreacionallabel);
+            this.Panelrecreacional.Controls.Add(this.Identificadorlabelrecreacional);
+            this.Panelrecreacional.Controls.Add(this.Horarioiniciorecreacionalabel);
+            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrecreacionallabel);
+            this.Panelrecreacional.Controls.Add(this.Duenolocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Identificadorlocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.horarioiniciolocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrereacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Crearlocalrecreacionalbtn);
+            this.Panelrecreacional.Location = new System.Drawing.Point(0, 0);
+            this.Panelrecreacional.Name = "Panelrecreacional";
+            this.Panelrecreacional.Size = new System.Drawing.Size(800, 450);
+            this.Panelrecreacional.TabIndex = 11;
+            this.Panelrecreacional.Visible = false;
             // 
             // Panelcine
             // 
@@ -187,98 +324,6 @@
             this.Nombreduenolabel.TabIndex = 0;
             this.Nombreduenolabel.Text = "Nombre dueño:";
             // 
-            // Paneldeopciones
-            // 
-            this.Paneldeopciones.BackColor = System.Drawing.Color.DarkGray;
-            this.Paneldeopciones.Controls.Add(this.Enviaropcionbtn);
-            this.Paneldeopciones.Controls.Add(this.Labelcomboxopciones);
-            this.Paneldeopciones.Controls.Add(this.Comboxopciones);
-            this.Paneldeopciones.Location = new System.Drawing.Point(114, 188);
-            this.Paneldeopciones.Name = "Paneldeopciones";
-            this.Paneldeopciones.Size = new System.Drawing.Size(550, 96);
-            this.Paneldeopciones.TabIndex = 10;
-            this.Paneldeopciones.Visible = false;
-            // 
-            // Enviaropcionbtn
-            // 
-            this.Enviaropcionbtn.Location = new System.Drawing.Point(229, 50);
-            this.Enviaropcionbtn.Name = "Enviaropcionbtn";
-            this.Enviaropcionbtn.Size = new System.Drawing.Size(114, 23);
-            this.Enviaropcionbtn.TabIndex = 6;
-            this.Enviaropcionbtn.Text = "Enviar ";
-            this.Enviaropcionbtn.UseVisualStyleBackColor = true;
-            this.Enviaropcionbtn.Click += new System.EventHandler(this.Enviaropcionbtn_Click);
-            // 
-            // Labelcomboxopciones
-            // 
-            this.Labelcomboxopciones.AutoSize = true;
-            this.Labelcomboxopciones.Location = new System.Drawing.Point(94, 9);
-            this.Labelcomboxopciones.Name = "Labelcomboxopciones";
-            this.Labelcomboxopciones.Size = new System.Drawing.Size(172, 13);
-            this.Labelcomboxopciones.TabIndex = 5;
-            this.Labelcomboxopciones.Text = "Elija una de las opciones a agregar";
-            // 
-            // Comboxopciones
-            // 
-            this.Comboxopciones.FormattingEnabled = true;
-            this.Comboxopciones.Items.AddRange(new object[] {
-            "Cine",
-            "Tienda",
-            "Restaurant",
-            "Recreacional"});
-            this.Comboxopciones.Location = new System.Drawing.Point(283, 9);
-            this.Comboxopciones.Name = "Comboxopciones";
-            this.Comboxopciones.Size = new System.Drawing.Size(170, 21);
-            this.Comboxopciones.TabIndex = 4;
-            this.Comboxopciones.Text = "Opciones de local";
-            // 
-            // Agregarlocalbtn
-            // 
-            this.Agregarlocalbtn.Location = new System.Drawing.Point(104, 307);
-            this.Agregarlocalbtn.Name = "Agregarlocalbtn";
-            this.Agregarlocalbtn.Size = new System.Drawing.Size(89, 36);
-            this.Agregarlocalbtn.TabIndex = 0;
-            this.Agregarlocalbtn.Text = "Agregar local";
-            this.Agregarlocalbtn.UseVisualStyleBackColor = true;
-            this.Agregarlocalbtn.Click += new System.EventHandler(this.Agregarlocalbtn_Click);
-            // 
-            // Revisarlocalbtn
-            // 
-            this.Revisarlocalbtn.Location = new System.Drawing.Point(329, 307);
-            this.Revisarlocalbtn.Name = "Revisarlocalbtn";
-            this.Revisarlocalbtn.Size = new System.Drawing.Size(80, 36);
-            this.Revisarlocalbtn.TabIndex = 1;
-            this.Revisarlocalbtn.Text = "Revisar local";
-            this.Revisarlocalbtn.UseVisualStyleBackColor = true;
-            // 
-            // Verlocalesexistentesbtn
-            // 
-            this.Verlocalesexistentesbtn.Location = new System.Drawing.Point(552, 307);
-            this.Verlocalesexistentesbtn.Name = "Verlocalesexistentesbtn";
-            this.Verlocalesexistentesbtn.Size = new System.Drawing.Size(112, 36);
-            this.Verlocalesexistentesbtn.TabIndex = 2;
-            this.Verlocalesexistentesbtn.Text = "Ver locales existentes";
-            this.Verlocalesexistentesbtn.UseVisualStyleBackColor = true;
-            // 
-            // Panelrecreacional
-            // 
-            this.Panelrecreacional.BackColor = System.Drawing.Color.Aqua;
-            this.Panelrecreacional.Controls.Add(this.Panelcine);
-            this.Panelrecreacional.Controls.Add(this.Nombreduenorecreacionallabel);
-            this.Panelrecreacional.Controls.Add(this.Identificadorlabelrecreacional);
-            this.Panelrecreacional.Controls.Add(this.Horarioiniciorecreacionalabel);
-            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrecreacionallabel);
-            this.Panelrecreacional.Controls.Add(this.Duenolocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Identificadorlocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.horarioiniciolocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrereacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Crearlocalrecreacionalbtn);
-            this.Panelrecreacional.Location = new System.Drawing.Point(0, 0);
-            this.Panelrecreacional.Name = "Panelrecreacional";
-            this.Panelrecreacional.Size = new System.Drawing.Size(800, 450);
-            this.Panelrecreacional.TabIndex = 11;
-            this.Panelrecreacional.Visible = false;
-            // 
             // Nombreduenorecreacionallabel
             // 
             this.Nombreduenorecreacionallabel.AutoSize = true;
@@ -353,6 +398,89 @@
             this.Crearlocalrecreacionalbtn.UseVisualStyleBackColor = true;
             this.Crearlocalrecreacionalbtn.Click += new System.EventHandler(this.Crearlocalrecreacionalbtn_Click);
             // 
+            // Paneldeopciones
+            // 
+            this.Paneldeopciones.BackColor = System.Drawing.Color.DarkGray;
+            this.Paneldeopciones.Controls.Add(this.Enviaropcionbtn);
+            this.Paneldeopciones.Controls.Add(this.Labelcomboxopciones);
+            this.Paneldeopciones.Controls.Add(this.Comboxopciones);
+            this.Paneldeopciones.Location = new System.Drawing.Point(114, 188);
+            this.Paneldeopciones.Name = "Paneldeopciones";
+            this.Paneldeopciones.Size = new System.Drawing.Size(550, 96);
+            this.Paneldeopciones.TabIndex = 10;
+            this.Paneldeopciones.Visible = false;
+            // 
+            // Enviaropcionbtn
+            // 
+            this.Enviaropcionbtn.Location = new System.Drawing.Point(229, 50);
+            this.Enviaropcionbtn.Name = "Enviaropcionbtn";
+            this.Enviaropcionbtn.Size = new System.Drawing.Size(114, 23);
+            this.Enviaropcionbtn.TabIndex = 6;
+            this.Enviaropcionbtn.Text = "Enviar ";
+            this.Enviaropcionbtn.UseVisualStyleBackColor = true;
+            this.Enviaropcionbtn.Click += new System.EventHandler(this.Enviaropcionbtn_Click);
+            // 
+            // Labelcomboxopciones
+            // 
+            this.Labelcomboxopciones.AutoSize = true;
+            this.Labelcomboxopciones.Location = new System.Drawing.Point(94, 9);
+            this.Labelcomboxopciones.Name = "Labelcomboxopciones";
+            this.Labelcomboxopciones.Size = new System.Drawing.Size(172, 13);
+            this.Labelcomboxopciones.TabIndex = 5;
+            this.Labelcomboxopciones.Text = "Elija una de las opciones a agregar";
+            // 
+            // Comboxopciones
+            // 
+            this.Comboxopciones.FormattingEnabled = true;
+            this.Comboxopciones.Items.AddRange(new object[] {
+            "Cine",
+            "Tienda",
+            "Restaurant",
+            "Recreacional"});
+            this.Comboxopciones.Location = new System.Drawing.Point(283, 9);
+            this.Comboxopciones.Name = "Comboxopciones";
+            this.Comboxopciones.Size = new System.Drawing.Size(170, 21);
+            this.Comboxopciones.TabIndex = 4;
+            this.Comboxopciones.Text = "Opciones de local";
+            // 
+            // Agregarlocalbtn
+            // 
+            this.Agregarlocalbtn.Location = new System.Drawing.Point(104, 307);
+            this.Agregarlocalbtn.Name = "Agregarlocalbtn";
+            this.Agregarlocalbtn.Size = new System.Drawing.Size(89, 36);
+            this.Agregarlocalbtn.TabIndex = 0;
+            this.Agregarlocalbtn.Text = "Agregar local";
+            this.Agregarlocalbtn.UseVisualStyleBackColor = true;
+            this.Agregarlocalbtn.Click += new System.EventHandler(this.Agregarlocalbtn_Click);
+            // 
+            // Revisarlocalbtn
+            // 
+            this.Revisarlocalbtn.Location = new System.Drawing.Point(329, 307);
+            this.Revisarlocalbtn.Name = "Revisarlocalbtn";
+            this.Revisarlocalbtn.Size = new System.Drawing.Size(80, 36);
+            this.Revisarlocalbtn.TabIndex = 1;
+            this.Revisarlocalbtn.Text = "Revisar local";
+            this.Revisarlocalbtn.UseVisualStyleBackColor = true;
+            // 
+            // Verlocalesexistentesbtn
+            // 
+            this.Verlocalesexistentesbtn.Location = new System.Drawing.Point(552, 307);
+            this.Verlocalesexistentesbtn.Name = "Verlocalesexistentesbtn";
+            this.Verlocalesexistentesbtn.Size = new System.Drawing.Size(112, 36);
+            this.Verlocalesexistentesbtn.TabIndex = 2;
+            this.Verlocalesexistentesbtn.Text = "Ver locales existentes";
+            this.Verlocalesexistentesbtn.UseVisualStyleBackColor = true;
+            // 
+            // Crearrestaurantbtn
+            // 
+            this.Crearrestaurantbtn.Location = new System.Drawing.Point(329, 238);
+            this.Crearrestaurantbtn.Name = "Crearrestaurantbtn";
+            this.Crearrestaurantbtn.Size = new System.Drawing.Size(114, 43);
+            this.Crearrestaurantbtn.TabIndex = 22;
+            this.Crearrestaurantbtn.Text = "Crear restaurant";
+            this.Crearrestaurantbtn.UseVisualStyleBackColor = true;
+            this.Crearrestaurantbtn.Click += new System.EventHandler(this.Crearrestaurantbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -362,12 +490,14 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Panelinicio.ResumeLayout(false);
+            this.Panelrestaurant.ResumeLayout(false);
+            this.Panelrestaurant.PerformLayout();
+            this.Panelrecreacional.ResumeLayout(false);
+            this.Panelrecreacional.PerformLayout();
             this.Panelcine.ResumeLayout(false);
             this.Panelcine.PerformLayout();
             this.Paneldeopciones.ResumeLayout(false);
             this.Paneldeopciones.PerformLayout();
-            this.Panelrecreacional.ResumeLayout(false);
-            this.Panelrecreacional.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -404,6 +534,18 @@
         private System.Windows.Forms.TextBox horarioiniciolocalrecreacionaltxt;
         private System.Windows.Forms.TextBox Horariocierrelocalrereacionaltxt;
         private System.Windows.Forms.Button Crearlocalrecreacionalbtn;
+        private System.Windows.Forms.Panel Panelrestaurant;
+        private System.Windows.Forms.Label Identificadorrestaurantlabel;
+        private System.Windows.Forms.TextBox Nombreduenorestauranttxt;
+        private System.Windows.Forms.Label Dunorestaurantlabel;
+        private System.Windows.Forms.ComboBox Incluirmesasexclusivascombobox;
+        private System.Windows.Forms.Label Incluirmesasexclusivaslabel;
+        private System.Windows.Forms.TextBox Horariocierrerestauranttxt;
+        private System.Windows.Forms.Label Horariocierrerestaurantlabel;
+        private System.Windows.Forms.Label Horarioiniciorestaurantlabel;
+        private System.Windows.Forms.TextBox Horarioiniciorestauranttxt;
+        private System.Windows.Forms.TextBox Identificadorrestauranttxt;
+        private System.Windows.Forms.Button Crearrestaurantbtn;
     }
 }
 

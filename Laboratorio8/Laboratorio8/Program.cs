@@ -20,6 +20,7 @@ namespace Laboratorio8
             Form1 form1 = new Form1();
             Cinecontroller cinecontroller = new Cinecontroller(form1);
             Recreacionalcontroller recreacionalcontroller = new Recreacionalcontroller(form1);
+            RestaurantController restaurantController = new RestaurantController(form1);
 
 
             Application.Run(form1);
