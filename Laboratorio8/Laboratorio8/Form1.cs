@@ -28,7 +28,8 @@ namespace Laboratorio8
             InitializeComponent();
             panels.Add("StartPanel",Panelinicio);
             panels.Add("Paneldeopciones", Paneldeopciones);
-            panels.Add("Paneñdecine", Panelcine);
+            panels.Add("Paneldecine", Panelcine);
+            panels.Add("Panelrecreacional", Panellocalrecreacional);
 
 
 
@@ -64,6 +65,12 @@ namespace Laboratorio8
                 Panelcine.Visible = true;
                 Paneldeopciones.Visible = false;
 
+            }
+            if (opcion == "Recreacional")
+            {
+                Panellocalrecreacional.Visible = true;             
+                Paneldeopciones.Visible = false;
+                Panelinicio.Visible = false;
             }
 
         }
