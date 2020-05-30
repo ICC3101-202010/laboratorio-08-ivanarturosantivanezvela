@@ -1,4 +1,5 @@
-﻿using Laboratorio8.CustomEvent_Args;
+﻿using Laboratorio8.Clases;
+using Laboratorio8.CustomEvent_Args;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace Laboratorio8
         public event EventHandler<SendingrecreacionalEventArgs> RecreacionalSended;
         //Evento para crear restaurant
         public event EventHandler<SendingRestaurantEventArgs> RestaurantSended;
+        //Evento para crear local 
+        public event EventHandler<SendingTiendaEventArgs> TiendaSended;
 
 
 
@@ -77,13 +80,19 @@ namespace Laboratorio8
             {
                 Panelrecreacional.Visible = true;
                 Paneldeopciones.Visible = false;
-                Panelcine.Visible = false;
+                
               
              
             }
             else if (opcion == "Restaurant")
             {
                 Panelrestaurant.Visible = true;
+                Paneldeopciones.Visible = false;
+            }
+
+            else if (opcion == "Tienda")
+            {
+                Paneltienda.Visible = true;
                 Paneldeopciones.Visible = false;
             }
 
@@ -134,6 +143,22 @@ namespace Laboratorio8
                 MessageBox.Show("Restaurant creado");
                 Panelrestaurant.Visible = false;
             }
+        }
+
+        private void Crearlocalbtn_Click(object sender, EventArgs e)
+        {
+            string nombreduenolocal = Nombreduenolocaltxt.Text;
+            string identificadorlocal = identificadorlocaltxt.Text;
+            string horarioiniciolocal = Horarioiniciolocaltxt.Text;
+            string horariocierrelocal = Horarioterminlocaltxt.Text;
+            string categoriastienda = Categoriastiendatxt.Text;
+            if (TiendaSended != null)
+            {
+                TiendaSended(this, new SendingTiendaEventArgs() { Nombreduenoenviado = nombreduenolocal, Identificadorenviado = identificadorlocal, Horarioinicioenviado = horarioiniciolocal, Horariocierreenviado = horariocierrelocal, Categoriastiendaenviado = categoriastienda });
+                MessageBox.Show("Tienda creada");
+                Paneltienda.Visible = false;
+            }
+
         }
     }
 }

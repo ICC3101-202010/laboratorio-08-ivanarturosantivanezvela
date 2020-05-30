@@ -21,7 +21,6 @@ namespace Laboratorio8.Controllers
             this.view.RestaurantSended += OnrestaurantSended;
 
 
-
         }
         public void OnrestaurantSended(object source, SendingRestaurantEventArgs e)
         {

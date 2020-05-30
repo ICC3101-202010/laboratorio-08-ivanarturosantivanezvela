@@ -21,6 +21,7 @@ namespace Laboratorio8
             Cinecontroller cinecontroller = new Cinecontroller(form1);
             Recreacionalcontroller recreacionalcontroller = new Recreacionalcontroller(form1);
             RestaurantController restaurantController = new RestaurantController(form1);
+            Tiendascontroller tiendascontroller = new Tiendascontroller(form1);
 
 
             Application.Run(form1);

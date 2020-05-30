@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="Controllers\Recreacionalcontroller.cs" />
     <Compile Include="Controllers\RestaurantController.cs" />
+    <Compile Include="Controllers\Tiendascontroller.cs" />
     <Compile Include="CustomEvent Args\SendingrecreacionalEventArgs.cs" />
     <Compile Include="CustomEvent Args\SendingRestaurantEventArgs.cs" />
+    <Compile Include="CustomEvent Args\SendingTiendaEventArgs.cs" />
     <Compile Include="Models\Cine.cs" />
     <Compile Include="Models\Recreacional.cs" />
     <Compile Include="Models\Restaurant.cs" />

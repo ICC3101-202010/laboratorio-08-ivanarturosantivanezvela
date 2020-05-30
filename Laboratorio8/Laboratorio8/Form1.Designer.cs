@@ -70,16 +70,29 @@
             this.Revisarlocalbtn = new System.Windows.Forms.Button();
             this.Verlocalesexistentesbtn = new System.Windows.Forms.Button();
             this.Crearrestaurantbtn = new System.Windows.Forms.Button();
+            this.Paneltienda = new System.Windows.Forms.Panel();
+            this.Nombreduenolocallabel = new System.Windows.Forms.Label();
+            this.Identificadorlocallabel = new System.Windows.Forms.Label();
+            this.Horarioiniciolocallabel = new System.Windows.Forms.Label();
+            this.Horarioterminolocallabel = new System.Windows.Forms.Label();
+            this.Categoriasteindalabel = new System.Windows.Forms.Label();
+            this.Nombreduenolocaltxt = new System.Windows.Forms.TextBox();
+            this.identificadorlocaltxt = new System.Windows.Forms.TextBox();
+            this.Horarioiniciolocaltxt = new System.Windows.Forms.TextBox();
+            this.Horarioterminlocaltxt = new System.Windows.Forms.TextBox();
+            this.Categoriastiendatxt = new System.Windows.Forms.TextBox();
+            this.Crearlocalbtn = new System.Windows.Forms.Button();
             this.Panelinicio.SuspendLayout();
             this.Panelrestaurant.SuspendLayout();
             this.Panelrecreacional.SuspendLayout();
             this.Panelcine.SuspendLayout();
             this.Paneldeopciones.SuspendLayout();
+            this.Paneltienda.SuspendLayout();
             this.SuspendLayout();
             // 
             // Panelinicio
             // 
-            this.Panelinicio.Controls.Add(this.Panelrestaurant);
+            this.Panelinicio.Controls.Add(this.Paneltienda);
             this.Panelinicio.Controls.Add(this.Paneldeopciones);
             this.Panelinicio.Controls.Add(this.Agregarlocalbtn);
             this.Panelinicio.Controls.Add(this.Revisarlocalbtn);
@@ -481,6 +494,117 @@
             this.Crearrestaurantbtn.UseVisualStyleBackColor = true;
             this.Crearrestaurantbtn.Click += new System.EventHandler(this.Crearrestaurantbtn_Click);
             // 
+            // Paneltienda
+            // 
+            this.Paneltienda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.Paneltienda.Controls.Add(this.Panelrestaurant);
+            this.Paneltienda.Controls.Add(this.Nombreduenolocallabel);
+            this.Paneltienda.Controls.Add(this.Nombreduenolocaltxt);
+            this.Paneltienda.Controls.Add(this.Identificadorlocallabel);
+            this.Paneltienda.Controls.Add(this.identificadorlocaltxt);
+            this.Paneltienda.Controls.Add(this.Horarioiniciolocallabel);
+            this.Paneltienda.Controls.Add(this.Horarioiniciolocaltxt);
+            this.Paneltienda.Controls.Add(this.Horarioterminolocallabel);
+            this.Paneltienda.Controls.Add(this.Horarioterminlocaltxt);
+            this.Paneltienda.Controls.Add(this.Categoriasteindalabel);
+            this.Paneltienda.Controls.Add(this.Categoriastiendatxt);
+            this.Paneltienda.Controls.Add(this.Crearlocalbtn);
+            this.Paneltienda.Location = new System.Drawing.Point(0, 0);
+            this.Paneltienda.Name = "Paneltienda";
+            this.Paneltienda.Size = new System.Drawing.Size(800, 450);
+            this.Paneltienda.TabIndex = 13;
+            this.Paneltienda.Visible = false;
+            // 
+            // Nombreduenolocallabel
+            // 
+            this.Nombreduenolocallabel.AutoSize = true;
+            this.Nombreduenolocallabel.Location = new System.Drawing.Point(56, 34);
+            this.Nombreduenolocallabel.Name = "Nombreduenolocallabel";
+            this.Nombreduenolocallabel.Size = new System.Drawing.Size(115, 13);
+            this.Nombreduenolocallabel.TabIndex = 13;
+            this.Nombreduenolocallabel.Text = "Nombre dueño tienda :";
+            // 
+            // Identificadorlocallabel
+            // 
+            this.Identificadorlocallabel.AutoSize = true;
+            this.Identificadorlocallabel.Location = new System.Drawing.Point(56, 63);
+            this.Identificadorlocallabel.Name = "Identificadorlocallabel";
+            this.Identificadorlocallabel.Size = new System.Drawing.Size(103, 13);
+            this.Identificadorlocallabel.TabIndex = 14;
+            this.Identificadorlocallabel.Text = "Identificador tienda :";
+            // 
+            // Horarioiniciolocallabel
+            // 
+            this.Horarioiniciolocallabel.AutoSize = true;
+            this.Horarioiniciolocallabel.Location = new System.Drawing.Point(56, 94);
+            this.Horarioiniciolocallabel.Name = "Horarioiniciolocallabel";
+            this.Horarioiniciolocallabel.Size = new System.Drawing.Size(106, 13);
+            this.Horarioiniciolocallabel.TabIndex = 15;
+            this.Horarioiniciolocallabel.Text = "Horario inicio tienda :";
+            // 
+            // Horarioterminolocallabel
+            // 
+            this.Horarioterminolocallabel.AutoSize = true;
+            this.Horarioterminolocallabel.Location = new System.Drawing.Point(56, 125);
+            this.Horarioterminolocallabel.Name = "Horarioterminolocallabel";
+            this.Horarioterminolocallabel.Size = new System.Drawing.Size(116, 13);
+            this.Horarioterminolocallabel.TabIndex = 16;
+            this.Horarioterminolocallabel.Text = "Horario termino tienda :";
+            // 
+            // Categoriasteindalabel
+            // 
+            this.Categoriasteindalabel.AutoSize = true;
+            this.Categoriasteindalabel.Location = new System.Drawing.Point(56, 155);
+            this.Categoriasteindalabel.Name = "Categoriasteindalabel";
+            this.Categoriasteindalabel.Size = new System.Drawing.Size(324, 13);
+            this.Categoriasteindalabel.TabIndex = 17;
+            this.Categoriasteindalabel.Text = "Categorias tienda (Escribir separadas por una coma Ej: ropa,infantil)";
+            // 
+            // Nombreduenolocaltxt
+            // 
+            this.Nombreduenolocaltxt.Location = new System.Drawing.Point(170, 31);
+            this.Nombreduenolocaltxt.Name = "Nombreduenolocaltxt";
+            this.Nombreduenolocaltxt.Size = new System.Drawing.Size(537, 20);
+            this.Nombreduenolocaltxt.TabIndex = 18;
+            // 
+            // identificadorlocaltxt
+            // 
+            this.identificadorlocaltxt.Location = new System.Drawing.Point(170, 60);
+            this.identificadorlocaltxt.Name = "identificadorlocaltxt";
+            this.identificadorlocaltxt.Size = new System.Drawing.Size(537, 20);
+            this.identificadorlocaltxt.TabIndex = 19;
+            // 
+            // Horarioiniciolocaltxt
+            // 
+            this.Horarioiniciolocaltxt.Location = new System.Drawing.Point(170, 91);
+            this.Horarioiniciolocaltxt.Name = "Horarioiniciolocaltxt";
+            this.Horarioiniciolocaltxt.Size = new System.Drawing.Size(537, 20);
+            this.Horarioiniciolocaltxt.TabIndex = 20;
+            // 
+            // Horarioterminlocaltxt
+            // 
+            this.Horarioterminlocaltxt.Location = new System.Drawing.Point(171, 122);
+            this.Horarioterminlocaltxt.Name = "Horarioterminlocaltxt";
+            this.Horarioterminlocaltxt.Size = new System.Drawing.Size(536, 20);
+            this.Horarioterminlocaltxt.TabIndex = 21;
+            // 
+            // Categoriastiendatxt
+            // 
+            this.Categoriastiendatxt.Location = new System.Drawing.Point(59, 173);
+            this.Categoriastiendatxt.Name = "Categoriastiendatxt";
+            this.Categoriastiendatxt.Size = new System.Drawing.Size(648, 20);
+            this.Categoriastiendatxt.TabIndex = 22;
+            // 
+            // Crearlocalbtn
+            // 
+            this.Crearlocalbtn.Location = new System.Drawing.Point(329, 241);
+            this.Crearlocalbtn.Name = "Crearlocalbtn";
+            this.Crearlocalbtn.Size = new System.Drawing.Size(117, 36);
+            this.Crearlocalbtn.TabIndex = 23;
+            this.Crearlocalbtn.Text = "Crear local";
+            this.Crearlocalbtn.UseVisualStyleBackColor = true;
+            this.Crearlocalbtn.Click += new System.EventHandler(this.Crearlocalbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -498,6 +622,8 @@
             this.Panelcine.PerformLayout();
             this.Paneldeopciones.ResumeLayout(false);
             this.Paneldeopciones.PerformLayout();
+            this.Paneltienda.ResumeLayout(false);
+            this.Paneltienda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -546,6 +672,18 @@
         private System.Windows.Forms.TextBox Horarioiniciorestauranttxt;
         private System.Windows.Forms.TextBox Identificadorrestauranttxt;
         private System.Windows.Forms.Button Crearrestaurantbtn;
+        private System.Windows.Forms.Panel Paneltienda;
+        private System.Windows.Forms.Button Crearlocalbtn;
+        private System.Windows.Forms.TextBox Categoriastiendatxt;
+        private System.Windows.Forms.TextBox Horarioterminlocaltxt;
+        private System.Windows.Forms.TextBox Horarioiniciolocaltxt;
+        private System.Windows.Forms.TextBox identificadorlocaltxt;
+        private System.Windows.Forms.TextBox Nombreduenolocaltxt;
+        private System.Windows.Forms.Label Categoriasteindalabel;
+        private System.Windows.Forms.Label Horarioterminolocallabel;
+        private System.Windows.Forms.Label Horarioiniciolocallabel;
+        private System.Windows.Forms.Label Identificadorlocallabel;
+        private System.Windows.Forms.Label Nombreduenolocallabel;
     }
 }
 
