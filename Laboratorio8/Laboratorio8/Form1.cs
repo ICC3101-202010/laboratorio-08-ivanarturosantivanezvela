@@ -16,6 +16,8 @@ namespace Laboratorio8
     {
         //Evento para enviar cine
         public event EventHandler<SendingCineEventArgs> CineSended;
+        //Evento para mandar recreacional
+        public event EventHandler<SendingrecreacionalEventArgs> RecreacionalSended;
 
 
 
@@ -29,7 +31,8 @@ namespace Laboratorio8
             panels.Add("StartPanel",Panelinicio);
             panels.Add("Paneldeopciones", Paneldeopciones);
             panels.Add("Paneldecine", Panelcine);
-            panels.Add("Panelrecreacional", Panellocalrecreacional);
+            
+            
 
 
 
@@ -53,6 +56,7 @@ namespace Laboratorio8
         private void Agregarlocalbtn_Click(object sender, EventArgs e)
         {
             Paneldeopciones.Visible = true;
+            
            
   
         }
@@ -66,11 +70,13 @@ namespace Laboratorio8
                 Paneldeopciones.Visible = false;
 
             }
-            if (opcion == "Recreacional")
+            else if (opcion == "Recreacional")
             {
-                Panellocalrecreacional.Visible = true;             
+                Panelrecreacional.Visible = true;
                 Paneldeopciones.Visible = false;
-                Panelinicio.Visible = false;
+                Panelcine.Visible = false;
+              
+             
             }
 
         }
@@ -89,6 +95,22 @@ namespace Laboratorio8
                 stackpanels.Add(Panelinicio);
                 ShowLastPanel();
             }
+        }
+
+        private void Crearlocalrecreacionalbtn_Click(object sender, EventArgs e)
+        {
+            string nombredueñorecreacional = Duenolocalrecreacionaltxt.Text;
+            string identificadorrecreacional = Identificadorlocalrecreacionaltxt.Text;
+            string horarioiniciorecre = horarioiniciolocalrecreacionaltxt.Text;
+            string horariocierrerecre = Horariocierrelocalrereacionaltxt.Text;
+            if (RecreacionalSended != null)
+            {
+                RecreacionalSended(this, new SendingrecreacionalEventArgs() { Nombreduenoenviado = nombredueñorecreacional, Identificadorenviado = identificadorrecreacional, Horarioinicioenviado = horarioiniciorecre, Horariocierreenviado = horariocierrerecre });
+                MessageBox.Show("Local recreacional creado");
+                Panelrecreacional.Visible = false;
+
+            }
+            
         }
     }
 }

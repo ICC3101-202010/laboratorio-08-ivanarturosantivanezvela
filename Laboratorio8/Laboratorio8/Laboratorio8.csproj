@@ -46,10 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases\Cine.cs" />
-    <Compile Include="Clases\Recreacional.cs" />
-    <Compile Include="Clases\Restaurant.cs" />
-    <Compile Include="Clases\Tienda.cs" />
+    <Compile Include="Controllers\Recreacionalcontroller.cs" />
+    <Compile Include="CustomEvent Args\SendingrecreacionalEventArgs.cs" />
+    <Compile Include="Models\Cine.cs" />
+    <Compile Include="Models\Recreacional.cs" />
+    <Compile Include="Models\Restaurant.cs" />
+    <Compile Include="Models\Tienda.cs" />
     <Compile Include="Controllers\Cinecontroller.cs" />
     <Compile Include="CustomEvent Args\SendingCineEventArgs.cs" />
     <Compile Include="Form1.cs">

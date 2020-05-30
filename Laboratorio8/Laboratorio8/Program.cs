@@ -19,6 +19,7 @@ namespace Laboratorio8
             Application.SetCompatibleTextRenderingDefault(false);
             Form1 form1 = new Form1();
             Cinecontroller cinecontroller = new Cinecontroller(form1);
+            Recreacionalcontroller recreacionalcontroller = new Recreacionalcontroller(form1);
 
 
             Application.Run(form1);
