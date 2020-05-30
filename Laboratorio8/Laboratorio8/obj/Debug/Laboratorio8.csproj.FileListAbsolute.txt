@@ -1,0 +1,10 @@
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\bin\Debug\Laboratorio8.exe.config
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\bin\Debug\Laboratorio8.exe
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\bin\Debug\Laboratorio8.pdb
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.csprojAssemblyReference.cache
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.Properties.Resources.resources
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.csproj.GenerateResource.cache
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.csproj.CoreCompileInputs.cache
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.exe
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.pdb
+C:\Users\Medicos\Desktop\Laboratorio 8\laboratorio-08-ivanarturosantivanezvela\Laboratorio8\Laboratorio8\obj\Debug\Laboratorio8.Form1.resources

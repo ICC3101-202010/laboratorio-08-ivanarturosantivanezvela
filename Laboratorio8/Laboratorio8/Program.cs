@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Laboratorio8.Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,11 @@ namespace Laboratorio8
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Form1 form1 = new Form1();
+            Cinecontroller cinecontroller = new Cinecontroller(form1);
+
+
+            Application.Run(form1);
         }
     }
 }
