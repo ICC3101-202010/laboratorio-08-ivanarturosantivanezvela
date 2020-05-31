@@ -36,7 +36,7 @@ namespace Laboratorio8
             InitializeComponent();
             panels.Add("StartPanel",Panelinicio);
             panels.Add("Paneldeopciones", Paneldeopciones);
-            panels.Add("Paneldecine", Panelcine);
+            //panels.Add("Paneldecine", Panelcine);
             
             
 
@@ -58,6 +58,7 @@ namespace Laboratorio8
 
             }
         }
+        
 
         private void Agregarlocalbtn_Click(object sender, EventArgs e)
         {
@@ -72,35 +73,39 @@ namespace Laboratorio8
             string opcion = Convert.ToString(this.Comboxopciones.SelectedItem);
             if (opcion == "Cine")
             {
+                Panelcine.Show();
                 Panelcine.Visible = true;
-                Paneldeopciones.Visible = false;
-
+                Paneldeopciones.Hide();
+                
             }
             else if (opcion == "Recreacional")
             {
+                //Panelrecreacional.Visible = true;
+                Panelrecreacional.Show();
                 Panelrecreacional.Visible = true;
-                Paneldeopciones.Visible = false;
-                
-              
+                Paneldeopciones.Hide();
              
             }
             else if (opcion == "Restaurant")
             {
+                Panelrestaurant.Show();
                 Panelrestaurant.Visible = true;
-                Paneldeopciones.Visible = false;
+                Paneldeopciones.Hide();
+                
+               
             }
 
             else if (opcion == "Tienda")
             {
-                Paneltienda.Visible = true;
-                Paneldeopciones.Visible = false;
+                Paneltienda.Show();
+                Paneldeopciones.Hide();
             }
 
         }
 
         private void Crearcinebtn_Click(object sender, EventArgs e)
         {
-            string nombredueño = Nombredueñotxt.Text;
+           string nombredueño = Nombredueñotxt.Text;
             string identificador = Identificadortxt.Text;
             string horarioinicio = Horarioiniciotxt.Text;
             string horariocierre = Horariocierretxt.Text;
@@ -109,8 +114,7 @@ namespace Laboratorio8
             {
                 CineSended(this, new SendingCineEventArgs() { Nombreduenoenviado = nombredueño, Identificadorenviado = identificador, Horarioinicioenviado = horarioinicio, Horariocierreenviado = horariocierre, Numerodesalasenviado = numerodesalas });
                 MessageBox.Show("Cine creado");
-                stackpanels.Add(Panelinicio);
-                ShowLastPanel();
+                Panelcine.Visible = false;
             }
         }
 
@@ -160,5 +164,6 @@ namespace Laboratorio8
             }
 
         }
+
     }
 }
