@@ -26,15 +26,15 @@ namespace Laboratorio8
         public event EventHandler<SendingTiendaEventArgs> TiendaSended;
         //Evento para busqueda
         public event EventHandler<SendingTextEventArgs> Sendingtext;
-
-
-
-
-
+        //Evento para traer cine
+        public delegate string ReceiveCineEventHandler(object sender, SendingTextEventArgs args);
+        public event ReceiveCineEventHandler RecivingCine;
 
 
         List<Panel> stackpanels = new List<Panel>();
         Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
+
+        string identificadorcine = "";
 
 
         public Form1()
@@ -111,14 +111,14 @@ namespace Laboratorio8
 
         private void Crearcinebtn_Click(object sender, EventArgs e)
         {
-           string nombredueño = Nombredueñotxt.Text;
-            string identificador = Identificadortxt.Text;
+            string nombredueño = Nombredueñotxt.Text;
+            identificadorcine = Identificadortxt.Text;
             string horarioinicio = Horarioiniciotxt.Text;
             string horariocierre = Horariocierretxt.Text;
             string numerodesalas = Numerodesalastxt.Text;
             if (CineSended != null)
             {
-                CineSended(this, new SendingCineEventArgs() { Nombreduenoenviado = nombredueño, Identificadorenviado = identificador, Horarioinicioenviado = horarioinicio, Horariocierreenviado = horariocierre, Numerodesalasenviado = numerodesalas });
+                CineSended(this, new SendingCineEventArgs() { Nombreduenoenviado = nombredueño, Identificadorenviado = identificadorcine, Horarioinicioenviado = horarioinicio, Horariocierreenviado = horariocierre, Numerodesalasenviado = numerodesalas });
                 MessageBox.Show("Cine creado");
                 Panelcine.Visible = false;
             }
@@ -183,8 +183,18 @@ namespace Laboratorio8
 
         private void Verlocalesexistentesbtn_Click(object sender, EventArgs e)
         {
-            
+            Paneldetodosloslocales.Show();
+            Paneldetodosloslocales.Visible = true;
+            if (RecivingCine != null)
+            {
+                string Cinema = RecivingCine(this, new SendingTextEventArgs() { SendingTexttofind = identificadorcine });
+                if (!Listboxdetodosloslocalesexistentes.Items.Contains(Cinema))
+                {
+                    Listboxdetodosloslocalesexistentes.Items.Add(Cinema);
+                }
 
+
+            }
 
         }
 
@@ -235,6 +245,11 @@ namespace Laboratorio8
         private void Volveriniciodesdebusquedabtn_Click(object sender, EventArgs e)
         {
             Paneldebusqueda.Visible = false;
+        }
+
+        private void btnvolverainicio_Click(object sender, EventArgs e)
+        {
+            Paneldetodosloslocales.Visible = false;
         }
     }
 }

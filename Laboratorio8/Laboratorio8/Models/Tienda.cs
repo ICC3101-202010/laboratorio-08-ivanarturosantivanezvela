@@ -36,7 +36,7 @@ namespace Laboratorio8.Clases
                 tiendas=tiendas +","+ t;
             }
            
-            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador tienda :" + Identificador + " || " + " Horario inicio tienda : " + Horario_inicio + "||" + " Horario cierre tienda : " + Horario_cierre + "||" + " Tiendas" + tiendas;
+            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador tienda :" + Identificador + " || " + " Horario inicio tienda : " + Horario_inicio + "||" + " Horario cierre tienda : " + Horario_cierre + "||" + " Tiendas: " + tiendas;
         }
 
 

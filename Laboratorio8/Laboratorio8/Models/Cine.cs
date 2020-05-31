@@ -31,7 +31,7 @@ namespace Laboratorio8.Clases
 
         public override string ToString()
         {
-            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador cine :" + Identificador + " || " + " Horario inicio cine : " +Horario_inicio+ "||" + " Horario cierre cine : " +Horario_cierre+ "||" +" Numero de salas "+ " || "+ Numero_de_salas;
+            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador cine :" + Identificador + " || " + " Horario inicio cine : " +Horario_inicio+ "||" + " Horario cierre cine : " +Horario_cierre+ "||" +" Numero de salas "+ Numero_de_salas;
         }
     }
 }

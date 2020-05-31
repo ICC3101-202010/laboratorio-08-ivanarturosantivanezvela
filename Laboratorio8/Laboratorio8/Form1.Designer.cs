@@ -88,6 +88,10 @@
             this.Identificadordellocaltxt = new System.Windows.Forms.TextBox();
             this.Ingreseelidentificadordellocallabel = new System.Windows.Forms.Label();
             this.Labeldebusqueda = new System.Windows.Forms.Label();
+            this.Paneldetodosloslocales = new System.Windows.Forms.Panel();
+            this.Labeldetodosloslocales = new System.Windows.Forms.Label();
+            this.Listboxdetodosloslocalesexistentes = new System.Windows.Forms.ListBox();
+            this.btnvolverainicio = new System.Windows.Forms.Button();
             this.Paneldeopciones.SuspendLayout();
             this.Panelinicio.SuspendLayout();
             this.Paneltienda.SuspendLayout();
@@ -95,6 +99,7 @@
             this.Panelrestaurant.SuspendLayout();
             this.Panelcine.SuspendLayout();
             this.Paneldebusqueda.SuspendLayout();
+            this.Paneldetodosloslocales.SuspendLayout();
             this.SuspendLayout();
             // 
             // Verlocalesexistentesbtn
@@ -671,11 +676,52 @@
             this.Labeldebusqueda.TabIndex = 0;
             this.Labeldebusqueda.Text = "Busqueda de local";
             // 
+            // Paneldetodosloslocales
+            // 
+            this.Paneldetodosloslocales.BackColor = System.Drawing.Color.Yellow;
+            this.Paneldetodosloslocales.Controls.Add(this.btnvolverainicio);
+            this.Paneldetodosloslocales.Controls.Add(this.Listboxdetodosloslocalesexistentes);
+            this.Paneldetodosloslocales.Controls.Add(this.Labeldetodosloslocales);
+            this.Paneldetodosloslocales.Location = new System.Drawing.Point(0, 0);
+            this.Paneldetodosloslocales.Name = "Paneldetodosloslocales";
+            this.Paneldetodosloslocales.Size = new System.Drawing.Size(800, 450);
+            this.Paneldetodosloslocales.TabIndex = 13;
+            this.Paneldetodosloslocales.Visible = false;
+            // 
+            // Labeldetodosloslocales
+            // 
+            this.Labeldetodosloslocales.AutoSize = true;
+            this.Labeldetodosloslocales.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Labeldetodosloslocales.Location = new System.Drawing.Point(276, 20);
+            this.Labeldetodosloslocales.Name = "Labeldetodosloslocales";
+            this.Labeldetodosloslocales.Size = new System.Drawing.Size(212, 33);
+            this.Labeldetodosloslocales.TabIndex = 0;
+            this.Labeldetodosloslocales.Text = "Locales existentes";
+            // 
+            // Listboxdetodosloslocalesexistentes
+            // 
+            this.Listboxdetodosloslocalesexistentes.FormattingEnabled = true;
+            this.Listboxdetodosloslocalesexistentes.Location = new System.Drawing.Point(170, 86);
+            this.Listboxdetodosloslocalesexistentes.Name = "Listboxdetodosloslocalesexistentes";
+            this.Listboxdetodosloslocalesexistentes.Size = new System.Drawing.Size(474, 212);
+            this.Listboxdetodosloslocalesexistentes.TabIndex = 1;
+            // 
+            // btnvolverainicio
+            // 
+            this.btnvolverainicio.Location = new System.Drawing.Point(346, 344);
+            this.btnvolverainicio.Name = "btnvolverainicio";
+            this.btnvolverainicio.Size = new System.Drawing.Size(111, 41);
+            this.btnvolverainicio.TabIndex = 2;
+            this.btnvolverainicio.Text = "Volver inicio";
+            this.btnvolverainicio.UseVisualStyleBackColor = true;
+            this.btnvolverainicio.Click += new System.EventHandler(this.btnvolverainicio_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Paneldetodosloslocales);
             this.Controls.Add(this.Panelrecreacional);
             this.Controls.Add(this.Paneldebusqueda);
             this.Controls.Add(this.Panelrestaurant);
@@ -697,6 +743,8 @@
             this.Panelcine.PerformLayout();
             this.Paneldebusqueda.ResumeLayout(false);
             this.Paneldebusqueda.PerformLayout();
+            this.Paneldetodosloslocales.ResumeLayout(false);
+            this.Paneldetodosloslocales.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -763,6 +811,10 @@
         private System.Windows.Forms.Label Ingreseelidentificadordellocallabel;
         private System.Windows.Forms.Label Labeldebusqueda;
         private System.Windows.Forms.Button Volveriniciodesdebusquedabtn;
+        private System.Windows.Forms.Panel Paneldetodosloslocales;
+        private System.Windows.Forms.Button btnvolverainicio;
+        private System.Windows.Forms.ListBox Listboxdetodosloslocalesexistentes;
+        private System.Windows.Forms.Label Labeldetodosloslocales;
     }
 }
 

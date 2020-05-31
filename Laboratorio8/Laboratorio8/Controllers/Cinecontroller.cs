@@ -20,6 +20,7 @@ namespace Laboratorio8.Controllers
             this.view = view as Form1;
             this.view.CineSended += OnCineSended;
             this.view.Sendingtext += OnSearchTextChanged;
+            this.view.RecivingCine += OnreturnCinema;
         }
 
         public void OnCineSended(object sender, SendingCineEventArgs e)
@@ -43,6 +44,20 @@ namespace Laboratorio8.Controllers
             }
             view.UpdateResults(resultString);
 
+        }
+        public string OnreturnCinema(object source, SendingTextEventArgs e)
+        {   string i  = "";
+            foreach(Cine c in cine)
+            {
+
+                if (c.Identificador == e.SendingTexttofind)
+                {
+                    i= c.ToString();
+                    return i;
+
+                }
+            }
+            return i;
         }
 
 

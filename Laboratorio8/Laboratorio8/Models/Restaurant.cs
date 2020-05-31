@@ -30,7 +30,7 @@ namespace Laboratorio8.Clases
         public string Exclusividad { get => exclusividad; set => exclusividad = value; }
         public override string ToString()
         {
-            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador restaurant :" + Identificador + " || " + " Horario inicio restaurant : " + Horario_inicio + "||" + " Horario cierre restaurant : " + Horario_cierre + "||" + " Exclusividad " + " || " + Exclusividad;
+            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador restaurant :" + Identificador + " || " + " Horario inicio restaurant : " + Horario_inicio + "||" + " Horario cierre restaurant : " + Horario_cierre + "||" + " Exclusividad: "  + Exclusividad;
         }
 
 
