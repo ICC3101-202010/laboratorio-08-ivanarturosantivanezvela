@@ -18,11 +18,29 @@ namespace Laboratorio8.Controllers
         {
             this.view = view as Form1;
             this.view.RecreacionalSended += Onrecreacionalsended;
+            this.view.Sendingtext += OnSearchTextChanged;
 
         }
         public void Onrecreacionalsended(object sender , SendingrecreacionalEventArgs e)
         {
             recreacional.Add(new Recreacional(e.Nombreduenoenviado, e.Identificadorenviado, e.Horarioinicioenviado, e.Horariocierreenviado));
+
+        }
+        public void OnSearchTextChanged(object sender, SendingTextEventArgs e)
+        {
+            List<Recreacional> resultRecreacional = new List<Recreacional>();
+            List<string> resultString = new List<string>();
+
+            resultRecreacional = recreacional.Where(t =>
+            t.Identificador.Contains(e.SendingTexttofind))
+            .ToList();
+            if (resultRecreacional.Count > 0)
+            {
+                resultString.Add("-----Recreacional encontrados-----");
+                foreach (Recreacional s in resultRecreacional)
+                    resultString.Add(s.ToString());
+            }
+            view.UpdateResults(resultString);
 
         }
     }

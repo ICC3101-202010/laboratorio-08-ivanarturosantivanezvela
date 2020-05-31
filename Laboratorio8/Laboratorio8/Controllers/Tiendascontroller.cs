@@ -18,6 +18,7 @@ namespace Laboratorio8.Controllers
         {
             this.view = view as Form1;
             this.view.TiendaSended += OnTiendaSended;
+            this.view.Sendingtext += OnSearchTextChanged;
             
         }
         public void OnTiendaSended(object sender, SendingTiendaEventArgs e)
@@ -31,7 +32,22 @@ namespace Laboratorio8.Controllers
             }
             Tiendas.Add(new Tienda(e.Nombreduenoenviado, e.Identificadorenviado, e.Horarioinicioenviado, e.Horariocierreenviado, categorias));
 
+        }
+        public void OnSearchTextChanged(object sender, SendingTextEventArgs e)
+        {
+            List<Tienda> resultTiendas = new List<Tienda>();
+            List<string> resultString = new List<string>();
 
+            resultTiendas = Tiendas.Where(t =>
+            t.Identificador.Contains(e.SendingTexttofind))
+            .ToList();
+            if (resultTiendas.Count > 0)
+            {
+                resultString.Add("-----Tiendas encontradas-----");
+                foreach (Tienda s in resultTiendas)
+                    resultString.Add(s.ToString());
+            }
+            view.UpdateResults(resultString);
 
         }
 

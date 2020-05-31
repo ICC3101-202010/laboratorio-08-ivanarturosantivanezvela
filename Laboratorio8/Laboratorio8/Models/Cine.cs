@@ -28,5 +28,10 @@ namespace Laboratorio8.Clases
         public string Horario_cierre { get => horario_cierre; set => horario_cierre = value; }
         public string Numero_de_salas { get => numero_de_salas; set => numero_de_salas = value; }
         public string Identificador { get => identificador; set => identificador = value; }
+
+        public override string ToString()
+        {
+            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador cine :" + Identificador + " || " + " Horario inicio cine : " +Horario_inicio+ "||" + " Horario cierre cine : " +Horario_cierre+ "||" +" Numero de salas "+ " || "+ Numero_de_salas;
+        }
     }
 }

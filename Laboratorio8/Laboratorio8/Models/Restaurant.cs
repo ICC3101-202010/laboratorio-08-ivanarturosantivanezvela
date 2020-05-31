@@ -28,5 +28,17 @@ namespace Laboratorio8.Clases
         public string Horario_inicio { get => horario_inicio; set => horario_inicio = value; }
         public string Horario_cierre { get => horario_cierre; set => horario_cierre = value; }
         public string Exclusividad { get => exclusividad; set => exclusividad = value; }
+        public override string ToString()
+        {
+            return "Nombre dueño: " + Nombre_dueño + "  ||  " + "   Identificador restaurant :" + Identificador + " || " + " Horario inicio restaurant : " + Horario_inicio + "||" + " Horario cierre restaurant : " + Horario_cierre + "||" + " Exclusividad " + " || " + Exclusividad;
+        }
+
+
+
+
     }
+    
+       
+    
+
 }

@@ -32,9 +32,9 @@
             this.Revisarlocalbtn = new System.Windows.Forms.Button();
             this.Agregarlocalbtn = new System.Windows.Forms.Button();
             this.Paneldeopciones = new System.Windows.Forms.Panel();
-            this.Comboxopciones = new System.Windows.Forms.ComboBox();
-            this.Labelcomboxopciones = new System.Windows.Forms.Label();
             this.Enviaropcionbtn = new System.Windows.Forms.Button();
+            this.Labelcomboxopciones = new System.Windows.Forms.Label();
+            this.Comboxopciones = new System.Windows.Forms.ComboBox();
             this.Panelinicio = new System.Windows.Forms.Panel();
             this.Crearlocalbtn = new System.Windows.Forms.Button();
             this.Categoriastiendatxt = new System.Windows.Forms.TextBox();
@@ -48,6 +48,16 @@
             this.Nombreduenolocaltxt = new System.Windows.Forms.TextBox();
             this.Nombreduenolocallabel = new System.Windows.Forms.Label();
             this.Paneltienda = new System.Windows.Forms.Panel();
+            this.Panelrecreacional = new System.Windows.Forms.Panel();
+            this.Nombreduenorecreacionallabel = new System.Windows.Forms.Label();
+            this.Identificadorlabelrecreacional = new System.Windows.Forms.Label();
+            this.Horarioiniciorecreacionalabel = new System.Windows.Forms.Label();
+            this.Horariocierrelocalrecreacionallabel = new System.Windows.Forms.Label();
+            this.Duenolocalrecreacionaltxt = new System.Windows.Forms.TextBox();
+            this.Identificadorlocalrecreacionaltxt = new System.Windows.Forms.TextBox();
+            this.horarioiniciolocalrecreacionaltxt = new System.Windows.Forms.TextBox();
+            this.Horariocierrelocalrereacionaltxt = new System.Windows.Forms.TextBox();
+            this.Crearlocalrecreacionalbtn = new System.Windows.Forms.Button();
             this.Crearrestaurantbtn = new System.Windows.Forms.Button();
             this.Incluirmesasexclusivaslabel = new System.Windows.Forms.Label();
             this.Horariocierrerestaurantlabel = new System.Windows.Forms.Label();
@@ -60,16 +70,6 @@
             this.Identificadorrestauranttxt = new System.Windows.Forms.TextBox();
             this.Nombreduenorestauranttxt = new System.Windows.Forms.TextBox();
             this.Panelrestaurant = new System.Windows.Forms.Panel();
-            this.Crearlocalrecreacionalbtn = new System.Windows.Forms.Button();
-            this.Horariocierrelocalrereacionaltxt = new System.Windows.Forms.TextBox();
-            this.horarioiniciolocalrecreacionaltxt = new System.Windows.Forms.TextBox();
-            this.Identificadorlocalrecreacionaltxt = new System.Windows.Forms.TextBox();
-            this.Duenolocalrecreacionaltxt = new System.Windows.Forms.TextBox();
-            this.Horariocierrelocalrecreacionallabel = new System.Windows.Forms.Label();
-            this.Horarioiniciorecreacionalabel = new System.Windows.Forms.Label();
-            this.Identificadorlabelrecreacional = new System.Windows.Forms.Label();
-            this.Nombreduenorecreacionallabel = new System.Windows.Forms.Label();
-            this.Panelrecreacional = new System.Windows.Forms.Panel();
             this.Nombreduenolabel = new System.Windows.Forms.Label();
             this.Identificadorlabelcine = new System.Windows.Forms.Label();
             this.Horarioiniciocinelabel = new System.Windows.Forms.Label();
@@ -82,12 +82,19 @@
             this.Numerodesalastxt = new System.Windows.Forms.TextBox();
             this.Crearcinebtn = new System.Windows.Forms.Button();
             this.Panelcine = new System.Windows.Forms.Panel();
+            this.Paneldebusqueda = new System.Windows.Forms.Panel();
+            this.Volveriniciodesdebusquedabtn = new System.Windows.Forms.Button();
+            this.Localesconeseidentificadorlistbox = new System.Windows.Forms.ListBox();
+            this.Identificadordellocaltxt = new System.Windows.Forms.TextBox();
+            this.Ingreseelidentificadordellocallabel = new System.Windows.Forms.Label();
+            this.Labeldebusqueda = new System.Windows.Forms.Label();
             this.Paneldeopciones.SuspendLayout();
             this.Panelinicio.SuspendLayout();
             this.Paneltienda.SuspendLayout();
-            this.Panelrestaurant.SuspendLayout();
             this.Panelrecreacional.SuspendLayout();
+            this.Panelrestaurant.SuspendLayout();
             this.Panelcine.SuspendLayout();
+            this.Paneldebusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // Verlocalesexistentesbtn
@@ -98,6 +105,7 @@
             this.Verlocalesexistentesbtn.TabIndex = 2;
             this.Verlocalesexistentesbtn.Text = "Ver locales existentes";
             this.Verlocalesexistentesbtn.UseVisualStyleBackColor = true;
+            this.Verlocalesexistentesbtn.Click += new System.EventHandler(this.Verlocalesexistentesbtn_Click);
             // 
             // Revisarlocalbtn
             // 
@@ -107,6 +115,7 @@
             this.Revisarlocalbtn.TabIndex = 1;
             this.Revisarlocalbtn.Text = "Revisar local";
             this.Revisarlocalbtn.UseVisualStyleBackColor = true;
+            this.Revisarlocalbtn.Click += new System.EventHandler(this.Revisarlocalbtn_Click);
             // 
             // Agregarlocalbtn
             // 
@@ -130,6 +139,25 @@
             this.Paneldeopciones.TabIndex = 10;
             this.Paneldeopciones.Visible = false;
             // 
+            // Enviaropcionbtn
+            // 
+            this.Enviaropcionbtn.Location = new System.Drawing.Point(229, 50);
+            this.Enviaropcionbtn.Name = "Enviaropcionbtn";
+            this.Enviaropcionbtn.Size = new System.Drawing.Size(114, 23);
+            this.Enviaropcionbtn.TabIndex = 6;
+            this.Enviaropcionbtn.Text = "Enviar ";
+            this.Enviaropcionbtn.UseVisualStyleBackColor = true;
+            this.Enviaropcionbtn.Click += new System.EventHandler(this.Enviaropcionbtn_Click);
+            // 
+            // Labelcomboxopciones
+            // 
+            this.Labelcomboxopciones.AutoSize = true;
+            this.Labelcomboxopciones.Location = new System.Drawing.Point(94, 9);
+            this.Labelcomboxopciones.Name = "Labelcomboxopciones";
+            this.Labelcomboxopciones.Size = new System.Drawing.Size(172, 13);
+            this.Labelcomboxopciones.TabIndex = 5;
+            this.Labelcomboxopciones.Text = "Elija una de las opciones a agregar";
+            // 
             // Comboxopciones
             // 
             this.Comboxopciones.FormattingEnabled = true;
@@ -143,25 +171,6 @@
             this.Comboxopciones.Size = new System.Drawing.Size(170, 21);
             this.Comboxopciones.TabIndex = 4;
             this.Comboxopciones.Text = "Opciones de local";
-            // 
-            // Labelcomboxopciones
-            // 
-            this.Labelcomboxopciones.AutoSize = true;
-            this.Labelcomboxopciones.Location = new System.Drawing.Point(94, 9);
-            this.Labelcomboxopciones.Name = "Labelcomboxopciones";
-            this.Labelcomboxopciones.Size = new System.Drawing.Size(172, 13);
-            this.Labelcomboxopciones.TabIndex = 5;
-            this.Labelcomboxopciones.Text = "Elija una de las opciones a agregar";
-            // 
-            // Enviaropcionbtn
-            // 
-            this.Enviaropcionbtn.Location = new System.Drawing.Point(229, 50);
-            this.Enviaropcionbtn.Name = "Enviaropcionbtn";
-            this.Enviaropcionbtn.Size = new System.Drawing.Size(114, 23);
-            this.Enviaropcionbtn.TabIndex = 6;
-            this.Enviaropcionbtn.Text = "Enviar ";
-            this.Enviaropcionbtn.UseVisualStyleBackColor = true;
-            this.Enviaropcionbtn.Click += new System.EventHandler(this.Enviaropcionbtn_Click);
             // 
             // Panelinicio
             // 
@@ -285,6 +294,98 @@
             this.Paneltienda.TabIndex = 13;
             this.Paneltienda.Visible = false;
             // 
+            // Panelrecreacional
+            // 
+            this.Panelrecreacional.BackColor = System.Drawing.Color.Aqua;
+            this.Panelrecreacional.Controls.Add(this.Nombreduenorecreacionallabel);
+            this.Panelrecreacional.Controls.Add(this.Identificadorlabelrecreacional);
+            this.Panelrecreacional.Controls.Add(this.Horarioiniciorecreacionalabel);
+            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrecreacionallabel);
+            this.Panelrecreacional.Controls.Add(this.Duenolocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Identificadorlocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.horarioiniciolocalrecreacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrereacionaltxt);
+            this.Panelrecreacional.Controls.Add(this.Crearlocalrecreacionalbtn);
+            this.Panelrecreacional.Location = new System.Drawing.Point(0, 0);
+            this.Panelrecreacional.Name = "Panelrecreacional";
+            this.Panelrecreacional.Size = new System.Drawing.Size(800, 450);
+            this.Panelrecreacional.TabIndex = 11;
+            this.Panelrecreacional.Visible = false;
+            // 
+            // Nombreduenorecreacionallabel
+            // 
+            this.Nombreduenorecreacionallabel.AutoSize = true;
+            this.Nombreduenorecreacionallabel.Location = new System.Drawing.Point(30, 26);
+            this.Nombreduenorecreacionallabel.Name = "Nombreduenorecreacionallabel";
+            this.Nombreduenorecreacionallabel.Size = new System.Drawing.Size(83, 13);
+            this.Nombreduenorecreacionallabel.TabIndex = 4;
+            this.Nombreduenorecreacionallabel.Text = "Nombre dueño: ";
+            // 
+            // Identificadorlabelrecreacional
+            // 
+            this.Identificadorlabelrecreacional.AutoSize = true;
+            this.Identificadorlabelrecreacional.Location = new System.Drawing.Point(30, 52);
+            this.Identificadorlabelrecreacional.Name = "Identificadorlabelrecreacional";
+            this.Identificadorlabelrecreacional.Size = new System.Drawing.Size(71, 13);
+            this.Identificadorlabelrecreacional.TabIndex = 5;
+            this.Identificadorlabelrecreacional.Text = "Identificador: ";
+            // 
+            // Horarioiniciorecreacionalabel
+            // 
+            this.Horarioiniciorecreacionalabel.AutoSize = true;
+            this.Horarioiniciorecreacionalabel.Location = new System.Drawing.Point(30, 78);
+            this.Horarioiniciorecreacionalabel.Name = "Horarioiniciorecreacionalabel";
+            this.Horarioiniciorecreacionalabel.Size = new System.Drawing.Size(157, 13);
+            this.Horarioiniciorecreacionalabel.TabIndex = 6;
+            this.Horarioiniciorecreacionalabel.Text = "Horario inicio local recreacional:";
+            // 
+            // Horariocierrelocalrecreacionallabel
+            // 
+            this.Horariocierrelocalrecreacionallabel.AutoSize = true;
+            this.Horariocierrelocalrecreacionallabel.Location = new System.Drawing.Point(30, 101);
+            this.Horariocierrelocalrecreacionallabel.Name = "Horariocierrelocalrecreacionallabel";
+            this.Horariocierrelocalrecreacionallabel.Size = new System.Drawing.Size(156, 13);
+            this.Horariocierrelocalrecreacionallabel.TabIndex = 7;
+            this.Horariocierrelocalrecreacionallabel.Text = "Horario cierre local recreacional";
+            // 
+            // Duenolocalrecreacionaltxt
+            // 
+            this.Duenolocalrecreacionaltxt.Location = new System.Drawing.Point(119, 23);
+            this.Duenolocalrecreacionaltxt.Name = "Duenolocalrecreacionaltxt";
+            this.Duenolocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
+            this.Duenolocalrecreacionaltxt.TabIndex = 8;
+            // 
+            // Identificadorlocalrecreacionaltxt
+            // 
+            this.Identificadorlocalrecreacionaltxt.Location = new System.Drawing.Point(119, 49);
+            this.Identificadorlocalrecreacionaltxt.Name = "Identificadorlocalrecreacionaltxt";
+            this.Identificadorlocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
+            this.Identificadorlocalrecreacionaltxt.TabIndex = 9;
+            // 
+            // horarioiniciolocalrecreacionaltxt
+            // 
+            this.horarioiniciolocalrecreacionaltxt.Location = new System.Drawing.Point(197, 74);
+            this.horarioiniciolocalrecreacionaltxt.Name = "horarioiniciolocalrecreacionaltxt";
+            this.horarioiniciolocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
+            this.horarioiniciolocalrecreacionaltxt.TabIndex = 10;
+            // 
+            // Horariocierrelocalrereacionaltxt
+            // 
+            this.Horariocierrelocalrereacionaltxt.Location = new System.Drawing.Point(197, 101);
+            this.Horariocierrelocalrereacionaltxt.Name = "Horariocierrelocalrereacionaltxt";
+            this.Horariocierrelocalrereacionaltxt.Size = new System.Drawing.Size(401, 20);
+            this.Horariocierrelocalrereacionaltxt.TabIndex = 11;
+            // 
+            // Crearlocalrecreacionalbtn
+            // 
+            this.Crearlocalrecreacionalbtn.Location = new System.Drawing.Point(359, 213);
+            this.Crearlocalrecreacionalbtn.Name = "Crearlocalrecreacionalbtn";
+            this.Crearlocalrecreacionalbtn.Size = new System.Drawing.Size(112, 35);
+            this.Crearlocalrecreacionalbtn.TabIndex = 12;
+            this.Crearlocalrecreacionalbtn.Text = "Crear local recreacional";
+            this.Crearlocalrecreacionalbtn.UseVisualStyleBackColor = true;
+            this.Crearlocalrecreacionalbtn.Click += new System.EventHandler(this.Crearlocalrecreacionalbtn_Click);
+            // 
             // Crearrestaurantbtn
             // 
             this.Crearrestaurantbtn.Location = new System.Drawing.Point(329, 238);
@@ -399,98 +500,6 @@
             this.Panelrestaurant.TabIndex = 12;
             this.Panelrestaurant.Visible = false;
             // 
-            // Crearlocalrecreacionalbtn
-            // 
-            this.Crearlocalrecreacionalbtn.Location = new System.Drawing.Point(359, 213);
-            this.Crearlocalrecreacionalbtn.Name = "Crearlocalrecreacionalbtn";
-            this.Crearlocalrecreacionalbtn.Size = new System.Drawing.Size(112, 35);
-            this.Crearlocalrecreacionalbtn.TabIndex = 12;
-            this.Crearlocalrecreacionalbtn.Text = "Crear local recreacional";
-            this.Crearlocalrecreacionalbtn.UseVisualStyleBackColor = true;
-            this.Crearlocalrecreacionalbtn.Click += new System.EventHandler(this.Crearlocalrecreacionalbtn_Click);
-            // 
-            // Horariocierrelocalrereacionaltxt
-            // 
-            this.Horariocierrelocalrereacionaltxt.Location = new System.Drawing.Point(197, 101);
-            this.Horariocierrelocalrereacionaltxt.Name = "Horariocierrelocalrereacionaltxt";
-            this.Horariocierrelocalrereacionaltxt.Size = new System.Drawing.Size(401, 20);
-            this.Horariocierrelocalrereacionaltxt.TabIndex = 11;
-            // 
-            // horarioiniciolocalrecreacionaltxt
-            // 
-            this.horarioiniciolocalrecreacionaltxt.Location = new System.Drawing.Point(197, 74);
-            this.horarioiniciolocalrecreacionaltxt.Name = "horarioiniciolocalrecreacionaltxt";
-            this.horarioiniciolocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
-            this.horarioiniciolocalrecreacionaltxt.TabIndex = 10;
-            // 
-            // Identificadorlocalrecreacionaltxt
-            // 
-            this.Identificadorlocalrecreacionaltxt.Location = new System.Drawing.Point(119, 49);
-            this.Identificadorlocalrecreacionaltxt.Name = "Identificadorlocalrecreacionaltxt";
-            this.Identificadorlocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
-            this.Identificadorlocalrecreacionaltxt.TabIndex = 9;
-            // 
-            // Duenolocalrecreacionaltxt
-            // 
-            this.Duenolocalrecreacionaltxt.Location = new System.Drawing.Point(119, 23);
-            this.Duenolocalrecreacionaltxt.Name = "Duenolocalrecreacionaltxt";
-            this.Duenolocalrecreacionaltxt.Size = new System.Drawing.Size(401, 20);
-            this.Duenolocalrecreacionaltxt.TabIndex = 8;
-            // 
-            // Horariocierrelocalrecreacionallabel
-            // 
-            this.Horariocierrelocalrecreacionallabel.AutoSize = true;
-            this.Horariocierrelocalrecreacionallabel.Location = new System.Drawing.Point(30, 101);
-            this.Horariocierrelocalrecreacionallabel.Name = "Horariocierrelocalrecreacionallabel";
-            this.Horariocierrelocalrecreacionallabel.Size = new System.Drawing.Size(156, 13);
-            this.Horariocierrelocalrecreacionallabel.TabIndex = 7;
-            this.Horariocierrelocalrecreacionallabel.Text = "Horario cierre local recreacional";
-            // 
-            // Horarioiniciorecreacionalabel
-            // 
-            this.Horarioiniciorecreacionalabel.AutoSize = true;
-            this.Horarioiniciorecreacionalabel.Location = new System.Drawing.Point(30, 78);
-            this.Horarioiniciorecreacionalabel.Name = "Horarioiniciorecreacionalabel";
-            this.Horarioiniciorecreacionalabel.Size = new System.Drawing.Size(157, 13);
-            this.Horarioiniciorecreacionalabel.TabIndex = 6;
-            this.Horarioiniciorecreacionalabel.Text = "Horario inicio local recreacional:";
-            // 
-            // Identificadorlabelrecreacional
-            // 
-            this.Identificadorlabelrecreacional.AutoSize = true;
-            this.Identificadorlabelrecreacional.Location = new System.Drawing.Point(30, 52);
-            this.Identificadorlabelrecreacional.Name = "Identificadorlabelrecreacional";
-            this.Identificadorlabelrecreacional.Size = new System.Drawing.Size(71, 13);
-            this.Identificadorlabelrecreacional.TabIndex = 5;
-            this.Identificadorlabelrecreacional.Text = "Identificador: ";
-            // 
-            // Nombreduenorecreacionallabel
-            // 
-            this.Nombreduenorecreacionallabel.AutoSize = true;
-            this.Nombreduenorecreacionallabel.Location = new System.Drawing.Point(30, 26);
-            this.Nombreduenorecreacionallabel.Name = "Nombreduenorecreacionallabel";
-            this.Nombreduenorecreacionallabel.Size = new System.Drawing.Size(83, 13);
-            this.Nombreduenorecreacionallabel.TabIndex = 4;
-            this.Nombreduenorecreacionallabel.Text = "Nombre dueño: ";
-            // 
-            // Panelrecreacional
-            // 
-            this.Panelrecreacional.BackColor = System.Drawing.Color.Aqua;
-            this.Panelrecreacional.Controls.Add(this.Nombreduenorecreacionallabel);
-            this.Panelrecreacional.Controls.Add(this.Identificadorlabelrecreacional);
-            this.Panelrecreacional.Controls.Add(this.Horarioiniciorecreacionalabel);
-            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrecreacionallabel);
-            this.Panelrecreacional.Controls.Add(this.Duenolocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Identificadorlocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.horarioiniciolocalrecreacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Horariocierrelocalrereacionaltxt);
-            this.Panelrecreacional.Controls.Add(this.Crearlocalrecreacionalbtn);
-            this.Panelrecreacional.Location = new System.Drawing.Point(0, 0);
-            this.Panelrecreacional.Name = "Panelrecreacional";
-            this.Panelrecreacional.Size = new System.Drawing.Size(800, 450);
-            this.Panelrecreacional.TabIndex = 11;
-            this.Panelrecreacional.Visible = false;
-            // 
             // Nombreduenolabel
             // 
             this.Nombreduenolabel.AutoSize = true;
@@ -601,14 +610,76 @@
             this.Panelcine.TabIndex = 3;
             this.Panelcine.Visible = false;
             // 
+            // Paneldebusqueda
+            // 
+            this.Paneldebusqueda.BackColor = System.Drawing.Color.Silver;
+            this.Paneldebusqueda.Controls.Add(this.Volveriniciodesdebusquedabtn);
+            this.Paneldebusqueda.Controls.Add(this.Localesconeseidentificadorlistbox);
+            this.Paneldebusqueda.Controls.Add(this.Identificadordellocaltxt);
+            this.Paneldebusqueda.Controls.Add(this.Ingreseelidentificadordellocallabel);
+            this.Paneldebusqueda.Controls.Add(this.Labeldebusqueda);
+            this.Paneldebusqueda.Location = new System.Drawing.Point(0, 0);
+            this.Paneldebusqueda.Name = "Paneldebusqueda";
+            this.Paneldebusqueda.Size = new System.Drawing.Size(800, 450);
+            this.Paneldebusqueda.TabIndex = 23;
+            this.Paneldebusqueda.Visible = false;
+            // 
+            // Volveriniciodesdebusquedabtn
+            // 
+            this.Volveriniciodesdebusquedabtn.Location = new System.Drawing.Point(371, 349);
+            this.Volveriniciodesdebusquedabtn.Name = "Volveriniciodesdebusquedabtn";
+            this.Volveriniciodesdebusquedabtn.Size = new System.Drawing.Size(100, 36);
+            this.Volveriniciodesdebusquedabtn.TabIndex = 4;
+            this.Volveriniciodesdebusquedabtn.Text = "Volver inicio";
+            this.Volveriniciodesdebusquedabtn.UseVisualStyleBackColor = true;
+            this.Volveriniciodesdebusquedabtn.Click += new System.EventHandler(this.Volveriniciodesdebusquedabtn_Click);
+            // 
+            // Localesconeseidentificadorlistbox
+            // 
+            this.Localesconeseidentificadorlistbox.FormattingEnabled = true;
+            this.Localesconeseidentificadorlistbox.HorizontalScrollbar = true;
+            this.Localesconeseidentificadorlistbox.Location = new System.Drawing.Point(252, 132);
+            this.Localesconeseidentificadorlistbox.Name = "Localesconeseidentificadorlistbox";
+            this.Localesconeseidentificadorlistbox.Size = new System.Drawing.Size(381, 186);
+            this.Localesconeseidentificadorlistbox.TabIndex = 3;
+            // 
+            // Identificadordellocaltxt
+            // 
+            this.Identificadordellocaltxt.Location = new System.Drawing.Point(252, 76);
+            this.Identificadordellocaltxt.Name = "Identificadordellocaltxt";
+            this.Identificadordellocaltxt.Size = new System.Drawing.Size(381, 20);
+            this.Identificadordellocaltxt.TabIndex = 2;
+            this.Identificadordellocaltxt.TextChanged += new System.EventHandler(this.Identificadordellocaltxt_TextChanged);
+            // 
+            // Ingreseelidentificadordellocallabel
+            // 
+            this.Ingreseelidentificadordellocallabel.AutoSize = true;
+            this.Ingreseelidentificadordellocallabel.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ingreseelidentificadordellocallabel.Location = new System.Drawing.Point(44, 77);
+            this.Ingreseelidentificadordellocallabel.Name = "Ingreseelidentificadordellocallabel";
+            this.Ingreseelidentificadordellocallabel.Size = new System.Drawing.Size(191, 17);
+            this.Ingreseelidentificadordellocallabel.TabIndex = 1;
+            this.Ingreseelidentificadordellocallabel.Text = "Ingrese el identificador del local";
+            // 
+            // Labeldebusqueda
+            // 
+            this.Labeldebusqueda.AutoSize = true;
+            this.Labeldebusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Labeldebusqueda.Location = new System.Drawing.Point(264, 21);
+            this.Labeldebusqueda.Name = "Labeldebusqueda";
+            this.Labeldebusqueda.Size = new System.Drawing.Size(207, 25);
+            this.Labeldebusqueda.TabIndex = 0;
+            this.Labeldebusqueda.Text = "Busqueda de local";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Panelrecreacional);
+            this.Controls.Add(this.Paneldebusqueda);
             this.Controls.Add(this.Panelrestaurant);
             this.Controls.Add(this.Panelcine);
-            this.Controls.Add(this.Panelrecreacional);
             this.Controls.Add(this.Paneltienda);
             this.Controls.Add(this.Panelinicio);
             this.Name = "Form1";
@@ -618,12 +689,14 @@
             this.Panelinicio.ResumeLayout(false);
             this.Paneltienda.ResumeLayout(false);
             this.Paneltienda.PerformLayout();
-            this.Panelrestaurant.ResumeLayout(false);
-            this.Panelrestaurant.PerformLayout();
             this.Panelrecreacional.ResumeLayout(false);
             this.Panelrecreacional.PerformLayout();
+            this.Panelrestaurant.ResumeLayout(false);
+            this.Panelrestaurant.PerformLayout();
             this.Panelcine.ResumeLayout(false);
             this.Panelcine.PerformLayout();
+            this.Paneldebusqueda.ResumeLayout(false);
+            this.Paneldebusqueda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -684,6 +757,12 @@
         private System.Windows.Forms.Label Categoriasteindalabel;
         private System.Windows.Forms.TextBox Categoriastiendatxt;
         private System.Windows.Forms.Button Crearlocalbtn;
+        private System.Windows.Forms.Panel Paneldebusqueda;
+        private System.Windows.Forms.ListBox Localesconeseidentificadorlistbox;
+        private System.Windows.Forms.TextBox Identificadordellocaltxt;
+        private System.Windows.Forms.Label Ingreseelidentificadordellocallabel;
+        private System.Windows.Forms.Label Labeldebusqueda;
+        private System.Windows.Forms.Button Volveriniciodesdebusquedabtn;
     }
 }
 

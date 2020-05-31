@@ -15,6 +15,7 @@ namespace Laboratorio8
     public partial class Form1 : Form
 
     {
+        int resultCounter = 0;
         //Evento para crear cine
         public event EventHandler<SendingCineEventArgs> CineSended;
         //Evento para crear recreacional
@@ -23,6 +24,11 @@ namespace Laboratorio8
         public event EventHandler<SendingRestaurantEventArgs> RestaurantSended;
         //Evento para crear local 
         public event EventHandler<SendingTiendaEventArgs> TiendaSended;
+        //Evento para busqueda
+        public event EventHandler<SendingTextEventArgs> Sendingtext;
+
+
+
 
 
 
@@ -165,5 +171,70 @@ namespace Laboratorio8
 
         }
 
+        private void Revisarlocalbtn_Click(object sender, EventArgs e)
+        {
+            Paneldebusqueda.Show();
+            Paneldebusqueda.Visible = true;
+            
+            
+
+
+        }
+
+        private void Verlocalesexistentesbtn_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void Identificadordellocaltxt_TextChanged(object sender, EventArgs e)
+        {
+            string texto = Identificadordellocaltxt.Text;
+            if (texto.Length >= 2)
+            {
+                CleanSearch();
+                Noresult();
+                if (Sendingtext != null)
+                {
+                    Sendingtext(this, new SendingTextEventArgs() { SendingTexttofind=texto});
+                }
+
+            }
+        }
+        private void Noresult()
+        {
+            Localesconeseidentificadorlistbox.Items.Add("No results for search criteria");
+        }
+        private void CleanSearch()
+        {
+            resultCounter = 0;
+            Localesconeseidentificadorlistbox.Items.Clear();
+        }
+        public void UpdateResults(List<string> results)
+        {
+            if (results.Count > 0)
+            {
+                foreach (string result in results)
+                {
+                    if (resultCounter <= 50)
+                    {
+                        if (Localesconeseidentificadorlistbox.Items.Count > 0 && Localesconeseidentificadorlistbox.Items[0].Equals("No results for search criteria"))
+                        {
+                            Localesconeseidentificadorlistbox.Items.Add(result);
+                            Localesconeseidentificadorlistbox.Items.RemoveAt(0);
+                        }
+                        else
+                            Localesconeseidentificadorlistbox.Items.Add(result);
+                        resultCounter++;
+                    }
+                }
+            }
+        }
+
+        private void Volveriniciodesdebusquedabtn_Click(object sender, EventArgs e)
+        {
+            Paneldebusqueda.Visible = false;
+        }
     }
 }
