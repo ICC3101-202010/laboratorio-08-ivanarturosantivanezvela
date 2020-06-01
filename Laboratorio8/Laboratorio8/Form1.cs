@@ -268,6 +268,9 @@ namespace Laboratorio8
         private void Volveriniciodesdebusquedabtn_Click(object sender, EventArgs e)
         {
             Paneldebusqueda.Visible = false;
+            Localesconeseidentificadorlistbox.Items.Clear();
+
+
         }
 
         private void btnvolverainicio_Click(object sender, EventArgs e)
