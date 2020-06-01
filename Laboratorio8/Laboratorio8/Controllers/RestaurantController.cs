@@ -20,6 +20,7 @@ namespace Laboratorio8.Controllers
             this.view = view as Form1;
             this.view.RestaurantSended += OnrestaurantSended;
             this.view.Sendingtext += OnSearchTextChanged;
+            this.view.RecivingRestaurant += Onreturrestaurant;
 
 
         }
@@ -45,6 +46,21 @@ namespace Laboratorio8.Controllers
             }
             view.UpdateResults(resultString);
 
+        }
+        public string Onreturrestaurant(object source, SendingTextEventArgs e)
+        {
+            string i = "";
+            foreach (Restaurant c in restaurants)
+            {
+
+                if (c.Identificador == e.SendingTexttofind)
+                {
+                    i = c.ToString();
+                    return i;
+
+                }
+            }
+            return i;
         }
     }
 }

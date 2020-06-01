@@ -89,9 +89,9 @@
             this.Ingreseelidentificadordellocallabel = new System.Windows.Forms.Label();
             this.Labeldebusqueda = new System.Windows.Forms.Label();
             this.Paneldetodosloslocales = new System.Windows.Forms.Panel();
-            this.Labeldetodosloslocales = new System.Windows.Forms.Label();
-            this.Listboxdetodosloslocalesexistentes = new System.Windows.Forms.ListBox();
             this.btnvolverainicio = new System.Windows.Forms.Button();
+            this.Listboxdetodosloslocalesexistentes = new System.Windows.Forms.ListBox();
+            this.Labeldetodosloslocales = new System.Windows.Forms.Label();
             this.Paneldeopciones.SuspendLayout();
             this.Panelinicio.SuspendLayout();
             this.Paneltienda.SuspendLayout();
@@ -688,24 +688,6 @@
             this.Paneldetodosloslocales.TabIndex = 13;
             this.Paneldetodosloslocales.Visible = false;
             // 
-            // Labeldetodosloslocales
-            // 
-            this.Labeldetodosloslocales.AutoSize = true;
-            this.Labeldetodosloslocales.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Labeldetodosloslocales.Location = new System.Drawing.Point(276, 20);
-            this.Labeldetodosloslocales.Name = "Labeldetodosloslocales";
-            this.Labeldetodosloslocales.Size = new System.Drawing.Size(212, 33);
-            this.Labeldetodosloslocales.TabIndex = 0;
-            this.Labeldetodosloslocales.Text = "Locales existentes";
-            // 
-            // Listboxdetodosloslocalesexistentes
-            // 
-            this.Listboxdetodosloslocalesexistentes.FormattingEnabled = true;
-            this.Listboxdetodosloslocalesexistentes.Location = new System.Drawing.Point(170, 86);
-            this.Listboxdetodosloslocalesexistentes.Name = "Listboxdetodosloslocalesexistentes";
-            this.Listboxdetodosloslocalesexistentes.Size = new System.Drawing.Size(474, 212);
-            this.Listboxdetodosloslocalesexistentes.TabIndex = 1;
-            // 
             // btnvolverainicio
             // 
             this.btnvolverainicio.Location = new System.Drawing.Point(346, 344);
@@ -715,6 +697,25 @@
             this.btnvolverainicio.Text = "Volver inicio";
             this.btnvolverainicio.UseVisualStyleBackColor = true;
             this.btnvolverainicio.Click += new System.EventHandler(this.btnvolverainicio_Click);
+            // 
+            // Listboxdetodosloslocalesexistentes
+            // 
+            this.Listboxdetodosloslocalesexistentes.FormattingEnabled = true;
+            this.Listboxdetodosloslocalesexistentes.HorizontalScrollbar = true;
+            this.Listboxdetodosloslocalesexistentes.Location = new System.Drawing.Point(170, 86);
+            this.Listboxdetodosloslocalesexistentes.Name = "Listboxdetodosloslocalesexistentes";
+            this.Listboxdetodosloslocalesexistentes.Size = new System.Drawing.Size(474, 212);
+            this.Listboxdetodosloslocalesexistentes.TabIndex = 1;
+            // 
+            // Labeldetodosloslocales
+            // 
+            this.Labeldetodosloslocales.AutoSize = true;
+            this.Labeldetodosloslocales.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Labeldetodosloslocales.Location = new System.Drawing.Point(276, 20);
+            this.Labeldetodosloslocales.Name = "Labeldetodosloslocales";
+            this.Labeldetodosloslocales.Size = new System.Drawing.Size(212, 33);
+            this.Labeldetodosloslocales.TabIndex = 0;
+            this.Labeldetodosloslocales.Text = "Locales existentes";
             // 
             // Form1
             // 

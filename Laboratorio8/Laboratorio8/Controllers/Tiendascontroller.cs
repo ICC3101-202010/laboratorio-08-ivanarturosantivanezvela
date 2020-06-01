@@ -19,6 +19,7 @@ namespace Laboratorio8.Controllers
             this.view = view as Form1;
             this.view.TiendaSended += OnTiendaSended;
             this.view.Sendingtext += OnSearchTextChanged;
+            this.view.RecivingTienda += Onreturnlocal;
             
         }
         public void OnTiendaSended(object sender, SendingTiendaEventArgs e)
@@ -50,6 +51,22 @@ namespace Laboratorio8.Controllers
             view.UpdateResults(resultString);
 
         }
+        public string Onreturnlocal(object source, SendingTextEventArgs e)
+        {
+            string i = "";
+            foreach (Tienda c in Tiendas)
+            {
+
+                if (c.Identificador == e.SendingTexttofind)
+                {
+                    i = c.ToString();
+                    return i;
+
+                }
+            }
+            return i;
+        }
+
 
 
     }

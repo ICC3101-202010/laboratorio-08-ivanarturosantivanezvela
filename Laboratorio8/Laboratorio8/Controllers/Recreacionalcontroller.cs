@@ -19,7 +19,7 @@ namespace Laboratorio8.Controllers
             this.view = view as Form1;
             this.view.RecreacionalSended += Onrecreacionalsended;
             this.view.Sendingtext += OnSearchTextChanged;
-
+            this.view.RecivingRecreacional += Onreturrecreacional;
         }
         public void Onrecreacionalsended(object sender , SendingrecreacionalEventArgs e)
         {
@@ -42,6 +42,21 @@ namespace Laboratorio8.Controllers
             }
             view.UpdateResults(resultString);
 
+        }
+        public string Onreturrecreacional(object source, SendingTextEventArgs e)
+        {
+            string i = "";
+            foreach (Recreacional c in recreacional)
+            {
+
+                if (c.Identificador == e.SendingTexttofind)
+                {
+                    i = c.ToString();
+                    return i;
+
+                }
+            }
+            return i;
         }
     }
 }

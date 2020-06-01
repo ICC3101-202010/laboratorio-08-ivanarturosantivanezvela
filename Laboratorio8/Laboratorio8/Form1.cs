@@ -29,12 +29,25 @@ namespace Laboratorio8
         //Evento para traer cine
         public delegate string ReceiveCineEventHandler(object sender, SendingTextEventArgs args);
         public event ReceiveCineEventHandler RecivingCine;
+        //Evento para traer recreacional
+        public delegate string ReceiveRecreacionalEventHandler(object sender, SendingTextEventArgs args);
+        public event ReceiveRecreacionalEventHandler RecivingRecreacional;
+        //Evento para trear restaurant
+        public delegate string ReceiverestaurantEventHandler(object sender, SendingTextEventArgs args);
+        public event ReceiverestaurantEventHandler RecivingRestaurant;
+        //Evento para traer tienda
+        public delegate string ReceiveTiiendaEventHandler(object sender, SendingTextEventArgs args);
+        public event ReceiveTiiendaEventHandler RecivingTienda;
+
 
 
         List<Panel> stackpanels = new List<Panel>();
         Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
 
         string identificadorcine = "";
+        string identificadorrecreacional = "";
+        string identificadorrestaurant = "";
+        string identificadorlocal = "";
 
 
         public Form1()
@@ -127,7 +140,7 @@ namespace Laboratorio8
         private void Crearlocalrecreacionalbtn_Click(object sender, EventArgs e)
         {
             string nombredueñorecreacional = Duenolocalrecreacionaltxt.Text;
-            string identificadorrecreacional = Identificadorlocalrecreacionaltxt.Text;
+            identificadorrecreacional = Identificadorlocalrecreacionaltxt.Text;
             string horarioiniciorecre = horarioiniciolocalrecreacionaltxt.Text;
             string horariocierrerecre = Horariocierrelocalrereacionaltxt.Text;
             if (RecreacionalSended != null)
@@ -143,7 +156,7 @@ namespace Laboratorio8
         private void Crearrestaurantbtn_Click(object sender, EventArgs e)
         {
             string nombreduenorestaurant = Nombreduenorestauranttxt.Text;
-            string identificadorrestaurant = Identificadorrestauranttxt.Text;
+            identificadorrestaurant = Identificadorrestauranttxt.Text;
             string horarioiniciorestaurant = Horarioiniciorestauranttxt.Text;
             string horariocierrerestaurant = Horariocierrerestauranttxt.Text;
             string exclusividad =Convert.ToString( this.Incluirmesasexclusivascombobox.SelectedItem);
@@ -158,7 +171,7 @@ namespace Laboratorio8
         private void Crearlocalbtn_Click(object sender, EventArgs e)
         {
             string nombreduenolocal = Nombreduenolocaltxt.Text;
-            string identificadorlocal = identificadorlocaltxt.Text;
+            identificadorlocal = identificadorlocaltxt.Text;
             string horarioiniciolocal = Horarioiniciolocaltxt.Text;
             string horariocierrelocal = Horarioterminlocaltxt.Text;
             string categoriastienda = Categoriastiendatxt.Text;
@@ -183,14 +196,22 @@ namespace Laboratorio8
 
         private void Verlocalesexistentesbtn_Click(object sender, EventArgs e)
         {
+            Listboxdetodosloslocalesexistentes.Items.Clear();
             Paneldetodosloslocales.Show();
             Paneldetodosloslocales.Visible = true;
-            if (RecivingCine != null)
+            if (RecivingCine != null || RecivingRecreacional!=null || RecivingRestaurant!=null || RecivingTienda!=null)
             {
                 string Cinema = RecivingCine(this, new SendingTextEventArgs() { SendingTexttofind = identificadorcine });
-                if (!Listboxdetodosloslocalesexistentes.Items.Contains(Cinema))
+                string Recreacional = RecivingRecreacional(this, new SendingTextEventArgs() { SendingTexttofind = identificadorrecreacional });
+                string Restaurant = RecivingRestaurant(this, new SendingTextEventArgs() { SendingTexttofind = identificadorrestaurant });
+                string Local = RecivingTienda(this, new SendingTextEventArgs() { SendingTexttofind = identificadorlocal });
+                if (!Listboxdetodosloslocalesexistentes.Items.Contains(Cinema) || Listboxdetodosloslocalesexistentes.Items.Contains(Recreacional)|| Listboxdetodosloslocalesexistentes.Items.Contains(Restaurant)||Listboxdetodosloslocalesexistentes.Items.Contains(Local))
                 {
                     Listboxdetodosloslocalesexistentes.Items.Add(Cinema);
+                    Listboxdetodosloslocalesexistentes.Items.Add(Recreacional);
+                    Listboxdetodosloslocalesexistentes.Items.Add(Restaurant);
+                    Listboxdetodosloslocalesexistentes.Items.Add(Local);
+
                 }
 
 
