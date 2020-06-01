@@ -43,6 +43,7 @@ namespace Laboratorio8
 
         List<Panel> stackpanels = new List<Panel>();
         Dictionary<string, Panel> panels = new Dictionary<string, Panel>();
+        List<string> cine = new List<string>();
 
         string identificadorcine = "";
         string identificadorrecreacional = "";
@@ -196,7 +197,7 @@ namespace Laboratorio8
 
         private void Verlocalesexistentesbtn_Click(object sender, EventArgs e)
         {
-            Listboxdetodosloslocalesexistentes.Items.Clear();
+            
             Paneldetodosloslocales.Show();
             Paneldetodosloslocales.Visible = true;
             if (RecivingCine != null || RecivingRecreacional!=null || RecivingRestaurant!=null || RecivingTienda!=null)
@@ -211,6 +212,7 @@ namespace Laboratorio8
                     Listboxdetodosloslocalesexistentes.Items.Add(Recreacional);
                     Listboxdetodosloslocalesexistentes.Items.Add(Restaurant);
                     Listboxdetodosloslocalesexistentes.Items.Add(Local);
+                    
 
                 }
 
@@ -271,6 +273,12 @@ namespace Laboratorio8
         private void btnvolverainicio_Click(object sender, EventArgs e)
         {
             Paneldetodosloslocales.Visible = false;
+            Listboxdetodosloslocalesexistentes.Items.Clear();
+        }
+
+        private void Horarioiniciotxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

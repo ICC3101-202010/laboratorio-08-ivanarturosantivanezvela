@@ -92,6 +92,8 @@
             this.btnvolverainicio = new System.Windows.Forms.Button();
             this.Listboxdetodosloslocalesexistentes = new System.Windows.Forms.ListBox();
             this.Labeldetodosloslocales = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.Paneldeopciones.SuspendLayout();
             this.Panelinicio.SuspendLayout();
             this.Paneltienda.SuspendLayout();
@@ -157,9 +159,10 @@
             // Labelcomboxopciones
             // 
             this.Labelcomboxopciones.AutoSize = true;
-            this.Labelcomboxopciones.Location = new System.Drawing.Point(94, 9);
+            this.Labelcomboxopciones.Font = new System.Drawing.Font("Georgia", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Labelcomboxopciones.Location = new System.Drawing.Point(47, 11);
             this.Labelcomboxopciones.Name = "Labelcomboxopciones";
-            this.Labelcomboxopciones.Size = new System.Drawing.Size(172, 13);
+            this.Labelcomboxopciones.Size = new System.Drawing.Size(230, 15);
             this.Labelcomboxopciones.TabIndex = 5;
             this.Labelcomboxopciones.Text = "Elija una de las opciones a agregar";
             // 
@@ -179,10 +182,13 @@
             // 
             // Panelinicio
             // 
+            this.Panelinicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.Panelinicio.Controls.Add(this.Paneldeopciones);
             this.Panelinicio.Controls.Add(this.Agregarlocalbtn);
             this.Panelinicio.Controls.Add(this.Revisarlocalbtn);
             this.Panelinicio.Controls.Add(this.Verlocalesexistentesbtn);
+            this.Panelinicio.Controls.Add(this.label1);
+            this.Panelinicio.Controls.Add(this.label2);
             this.Panelinicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Panelinicio.Location = new System.Drawing.Point(0, 0);
             this.Panelinicio.Name = "Panelinicio";
@@ -201,7 +207,7 @@
             // 
             // Categoriastiendatxt
             // 
-            this.Categoriastiendatxt.Location = new System.Drawing.Point(59, 173);
+            this.Categoriastiendatxt.Location = new System.Drawing.Point(37, 172);
             this.Categoriastiendatxt.Name = "Categoriastiendatxt";
             this.Categoriastiendatxt.Size = new System.Drawing.Size(648, 20);
             this.Categoriastiendatxt.TabIndex = 22;
@@ -209,9 +215,10 @@
             // Categoriasteindalabel
             // 
             this.Categoriasteindalabel.AutoSize = true;
-            this.Categoriasteindalabel.Location = new System.Drawing.Point(56, 155);
+            this.Categoriasteindalabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Categoriasteindalabel.Location = new System.Drawing.Point(34, 154);
             this.Categoriasteindalabel.Name = "Categoriasteindalabel";
-            this.Categoriasteindalabel.Size = new System.Drawing.Size(324, 13);
+            this.Categoriasteindalabel.Size = new System.Drawing.Size(373, 16);
             this.Categoriasteindalabel.TabIndex = 17;
             this.Categoriasteindalabel.Text = "Categorias tienda (Escribir separadas por una coma Ej: ropa,infantil)";
             // 
@@ -225,9 +232,10 @@
             // Horarioterminolocallabel
             // 
             this.Horarioterminolocallabel.AutoSize = true;
-            this.Horarioterminolocallabel.Location = new System.Drawing.Point(56, 125);
+            this.Horarioterminolocallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horarioterminolocallabel.Location = new System.Drawing.Point(34, 124);
             this.Horarioterminolocallabel.Name = "Horarioterminolocallabel";
-            this.Horarioterminolocallabel.Size = new System.Drawing.Size(116, 13);
+            this.Horarioterminolocallabel.Size = new System.Drawing.Size(138, 16);
             this.Horarioterminolocallabel.TabIndex = 16;
             this.Horarioterminolocallabel.Text = "Horario termino tienda :";
             // 
@@ -241,9 +249,10 @@
             // Horarioiniciolocallabel
             // 
             this.Horarioiniciolocallabel.AutoSize = true;
-            this.Horarioiniciolocallabel.Location = new System.Drawing.Point(56, 94);
+            this.Horarioiniciolocallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horarioiniciolocallabel.Location = new System.Drawing.Point(34, 95);
             this.Horarioiniciolocallabel.Name = "Horarioiniciolocallabel";
-            this.Horarioiniciolocallabel.Size = new System.Drawing.Size(106, 13);
+            this.Horarioiniciolocallabel.Size = new System.Drawing.Size(126, 16);
             this.Horarioiniciolocallabel.TabIndex = 15;
             this.Horarioiniciolocallabel.Text = "Horario inicio tienda :";
             // 
@@ -257,9 +266,10 @@
             // Identificadorlocallabel
             // 
             this.Identificadorlocallabel.AutoSize = true;
-            this.Identificadorlocallabel.Location = new System.Drawing.Point(56, 63);
+            this.Identificadorlocallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Identificadorlocallabel.Location = new System.Drawing.Point(34, 63);
             this.Identificadorlocallabel.Name = "Identificadorlocallabel";
-            this.Identificadorlocallabel.Size = new System.Drawing.Size(103, 13);
+            this.Identificadorlocallabel.Size = new System.Drawing.Size(122, 16);
             this.Identificadorlocallabel.TabIndex = 14;
             this.Identificadorlocallabel.Text = "Identificador tienda :";
             // 
@@ -273,9 +283,10 @@
             // Nombreduenolocallabel
             // 
             this.Nombreduenolocallabel.AutoSize = true;
-            this.Nombreduenolocallabel.Location = new System.Drawing.Point(56, 34);
+            this.Nombreduenolocallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombreduenolocallabel.Location = new System.Drawing.Point(34, 34);
             this.Nombreduenolocallabel.Name = "Nombreduenolocallabel";
-            this.Nombreduenolocallabel.Size = new System.Drawing.Size(115, 13);
+            this.Nombreduenolocallabel.Size = new System.Drawing.Size(132, 16);
             this.Nombreduenolocallabel.TabIndex = 13;
             this.Nombreduenolocallabel.Text = "Nombre dueño tienda :";
             // 
@@ -320,36 +331,40 @@
             // Nombreduenorecreacionallabel
             // 
             this.Nombreduenorecreacionallabel.AutoSize = true;
-            this.Nombreduenorecreacionallabel.Location = new System.Drawing.Point(30, 26);
+            this.Nombreduenorecreacionallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombreduenorecreacionallabel.Location = new System.Drawing.Point(20, 26);
             this.Nombreduenorecreacionallabel.Name = "Nombreduenorecreacionallabel";
-            this.Nombreduenorecreacionallabel.Size = new System.Drawing.Size(83, 13);
+            this.Nombreduenorecreacionallabel.Size = new System.Drawing.Size(95, 16);
             this.Nombreduenorecreacionallabel.TabIndex = 4;
             this.Nombreduenorecreacionallabel.Text = "Nombre dueño: ";
             // 
             // Identificadorlabelrecreacional
             // 
             this.Identificadorlabelrecreacional.AutoSize = true;
+            this.Identificadorlabelrecreacional.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Identificadorlabelrecreacional.Location = new System.Drawing.Point(30, 52);
             this.Identificadorlabelrecreacional.Name = "Identificadorlabelrecreacional";
-            this.Identificadorlabelrecreacional.Size = new System.Drawing.Size(71, 13);
+            this.Identificadorlabelrecreacional.Size = new System.Drawing.Size(85, 16);
             this.Identificadorlabelrecreacional.TabIndex = 5;
             this.Identificadorlabelrecreacional.Text = "Identificador: ";
             // 
             // Horarioiniciorecreacionalabel
             // 
             this.Horarioiniciorecreacionalabel.AutoSize = true;
-            this.Horarioiniciorecreacionalabel.Location = new System.Drawing.Point(30, 78);
+            this.Horarioiniciorecreacionalabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horarioiniciorecreacionalabel.Location = new System.Drawing.Point(5, 76);
             this.Horarioiniciorecreacionalabel.Name = "Horarioiniciorecreacionalabel";
-            this.Horarioiniciorecreacionalabel.Size = new System.Drawing.Size(157, 13);
+            this.Horarioiniciorecreacionalabel.Size = new System.Drawing.Size(188, 16);
             this.Horarioiniciorecreacionalabel.TabIndex = 6;
             this.Horarioiniciorecreacionalabel.Text = "Horario inicio local recreacional:";
             // 
             // Horariocierrelocalrecreacionallabel
             // 
             this.Horariocierrelocalrecreacionallabel.AutoSize = true;
-            this.Horariocierrelocalrecreacionallabel.Location = new System.Drawing.Point(30, 101);
+            this.Horariocierrelocalrecreacionallabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horariocierrelocalrecreacionallabel.Location = new System.Drawing.Point(5, 103);
             this.Horariocierrelocalrecreacionallabel.Name = "Horariocierrelocalrecreacionallabel";
-            this.Horariocierrelocalrecreacionallabel.Size = new System.Drawing.Size(156, 13);
+            this.Horariocierrelocalrecreacionallabel.Size = new System.Drawing.Size(188, 16);
             this.Horariocierrelocalrecreacionallabel.TabIndex = 7;
             this.Horariocierrelocalrecreacionallabel.Text = "Horario cierre local recreacional";
             // 
@@ -404,45 +419,50 @@
             // Incluirmesasexclusivaslabel
             // 
             this.Incluirmesasexclusivaslabel.AutoSize = true;
-            this.Incluirmesasexclusivaslabel.Location = new System.Drawing.Point(22, 172);
+            this.Incluirmesasexclusivaslabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Incluirmesasexclusivaslabel.Location = new System.Drawing.Point(4, 171);
             this.Incluirmesasexclusivaslabel.Name = "Incluirmesasexclusivaslabel";
-            this.Incluirmesasexclusivaslabel.Size = new System.Drawing.Size(159, 13);
+            this.Incluirmesasexclusivaslabel.Size = new System.Drawing.Size(177, 16);
             this.Incluirmesasexclusivaslabel.TabIndex = 20;
             this.Incluirmesasexclusivaslabel.Text = "Desea incluir mesas exclusivas?";
             // 
             // Horariocierrerestaurantlabel
             // 
             this.Horariocierrerestaurantlabel.AutoSize = true;
-            this.Horariocierrerestaurantlabel.Location = new System.Drawing.Point(22, 132);
+            this.Horariocierrerestaurantlabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horariocierrerestaurantlabel.Location = new System.Drawing.Point(4, 127);
             this.Horariocierrerestaurantlabel.Name = "Horariocierrerestaurantlabel";
-            this.Horariocierrerestaurantlabel.Size = new System.Drawing.Size(126, 13);
+            this.Horariocierrerestaurantlabel.Size = new System.Drawing.Size(152, 16);
             this.Horariocierrerestaurantlabel.TabIndex = 18;
             this.Horariocierrerestaurantlabel.Text = "Horario cierre restaurant :";
             // 
             // Horarioiniciorestaurantlabel
             // 
             this.Horarioiniciorestaurantlabel.AutoSize = true;
-            this.Horarioiniciorestaurantlabel.Location = new System.Drawing.Point(22, 94);
+            this.Horarioiniciorestaurantlabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horarioiniciorestaurantlabel.Location = new System.Drawing.Point(12, 89);
             this.Horarioiniciorestaurantlabel.Name = "Horarioiniciorestaurantlabel";
-            this.Horarioiniciorestaurantlabel.Size = new System.Drawing.Size(118, 13);
+            this.Horarioiniciorestaurantlabel.Size = new System.Drawing.Size(141, 16);
             this.Horarioiniciorestaurantlabel.TabIndex = 17;
             this.Horarioiniciorestaurantlabel.Text = "Horario inicio restaurant";
             // 
             // Identificadorrestaurantlabel
             // 
             this.Identificadorrestaurantlabel.AutoSize = true;
-            this.Identificadorrestaurantlabel.Location = new System.Drawing.Point(22, 63);
+            this.Identificadorrestaurantlabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Identificadorrestaurantlabel.Location = new System.Drawing.Point(12, 56);
             this.Identificadorrestaurantlabel.Name = "Identificadorrestaurantlabel";
-            this.Identificadorrestaurantlabel.Size = new System.Drawing.Size(121, 13);
+            this.Identificadorrestaurantlabel.Size = new System.Drawing.Size(144, 16);
             this.Identificadorrestaurantlabel.TabIndex = 14;
             this.Identificadorrestaurantlabel.Text = "Identificador restaurant :";
             // 
             // Dunorestaurantlabel
             // 
             this.Dunorestaurantlabel.AutoSize = true;
-            this.Dunorestaurantlabel.Location = new System.Drawing.Point(22, 30);
+            this.Dunorestaurantlabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Dunorestaurantlabel.Location = new System.Drawing.Point(5, 30);
             this.Dunorestaurantlabel.Name = "Dunorestaurantlabel";
-            this.Dunorestaurantlabel.Size = new System.Drawing.Size(133, 13);
+            this.Dunorestaurantlabel.Size = new System.Drawing.Size(154, 16);
             this.Dunorestaurantlabel.TabIndex = 12;
             this.Dunorestaurantlabel.Text = "Nombre dueño restaurant :";
             // 
@@ -508,79 +528,85 @@
             // Nombreduenolabel
             // 
             this.Nombreduenolabel.AutoSize = true;
-            this.Nombreduenolabel.Location = new System.Drawing.Point(11, 22);
+            this.Nombreduenolabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombreduenolabel.Location = new System.Drawing.Point(18, 21);
             this.Nombreduenolabel.Name = "Nombreduenolabel";
-            this.Nombreduenolabel.Size = new System.Drawing.Size(80, 13);
+            this.Nombreduenolabel.Size = new System.Drawing.Size(92, 16);
             this.Nombreduenolabel.TabIndex = 0;
             this.Nombreduenolabel.Text = "Nombre dueño:";
             // 
             // Identificadorlabelcine
             // 
             this.Identificadorlabelcine.AutoSize = true;
-            this.Identificadorlabelcine.Location = new System.Drawing.Point(11, 48);
+            this.Identificadorlabelcine.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Identificadorlabelcine.Location = new System.Drawing.Point(23, 49);
             this.Identificadorlabelcine.Name = "Identificadorlabelcine";
-            this.Identificadorlabelcine.Size = new System.Drawing.Size(71, 13);
+            this.Identificadorlabelcine.Size = new System.Drawing.Size(85, 16);
             this.Identificadorlabelcine.TabIndex = 1;
             this.Identificadorlabelcine.Text = "Identificador: ";
             // 
             // Horarioiniciocinelabel
             // 
             this.Horarioiniciocinelabel.AutoSize = true;
-            this.Horarioiniciocinelabel.Location = new System.Drawing.Point(11, 74);
+            this.Horarioiniciocinelabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horarioiniciocinelabel.Location = new System.Drawing.Point(3, 74);
             this.Horarioiniciocinelabel.Name = "Horarioiniciocinelabel";
-            this.Horarioiniciocinelabel.Size = new System.Drawing.Size(97, 13);
+            this.Horarioiniciocinelabel.Size = new System.Drawing.Size(116, 16);
             this.Horarioiniciocinelabel.TabIndex = 2;
             this.Horarioiniciocinelabel.Text = "Horario inicio cine: ";
             // 
             // Horariocierrecinelabel
             // 
             this.Horariocierrecinelabel.AutoSize = true;
-            this.Horariocierrecinelabel.Location = new System.Drawing.Point(11, 104);
+            this.Horariocierrecinelabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horariocierrecinelabel.Location = new System.Drawing.Point(3, 103);
             this.Horariocierrecinelabel.Name = "Horariocierrecinelabel";
-            this.Horariocierrecinelabel.Size = new System.Drawing.Size(99, 13);
+            this.Horariocierrecinelabel.Size = new System.Drawing.Size(119, 16);
             this.Horariocierrecinelabel.TabIndex = 3;
             this.Horariocierrecinelabel.Text = "Horacio cierre cine:";
             // 
             // Numerodesalaslabel
             // 
             this.Numerodesalaslabel.AutoSize = true;
+            this.Numerodesalaslabel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Numerodesalaslabel.Location = new System.Drawing.Point(11, 132);
             this.Numerodesalaslabel.Name = "Numerodesalaslabel";
-            this.Numerodesalaslabel.Size = new System.Drawing.Size(86, 13);
+            this.Numerodesalaslabel.Size = new System.Drawing.Size(95, 16);
             this.Numerodesalaslabel.TabIndex = 4;
             this.Numerodesalaslabel.Text = "Numero de salas";
             // 
             // Nombredueñotxt
             // 
-            this.Nombredueñotxt.Location = new System.Drawing.Point(108, 19);
+            this.Nombredueñotxt.Location = new System.Drawing.Point(122, 19);
             this.Nombredueñotxt.Name = "Nombredueñotxt";
             this.Nombredueñotxt.Size = new System.Drawing.Size(299, 20);
             this.Nombredueñotxt.TabIndex = 5;
             // 
             // Identificadortxt
             // 
-            this.Identificadortxt.Location = new System.Drawing.Point(108, 45);
+            this.Identificadortxt.Location = new System.Drawing.Point(122, 45);
             this.Identificadortxt.Name = "Identificadortxt";
             this.Identificadortxt.Size = new System.Drawing.Size(299, 20);
             this.Identificadortxt.TabIndex = 6;
             // 
             // Horarioiniciotxt
             // 
-            this.Horarioiniciotxt.Location = new System.Drawing.Point(108, 71);
+            this.Horarioiniciotxt.Location = new System.Drawing.Point(122, 70);
             this.Horarioiniciotxt.Name = "Horarioiniciotxt";
             this.Horarioiniciotxt.Size = new System.Drawing.Size(299, 20);
             this.Horarioiniciotxt.TabIndex = 7;
+            this.Horarioiniciotxt.TextChanged += new System.EventHandler(this.Horarioiniciotxt_TextChanged);
             // 
             // Horariocierretxt
             // 
-            this.Horariocierretxt.Location = new System.Drawing.Point(108, 101);
+            this.Horariocierretxt.Location = new System.Drawing.Point(122, 101);
             this.Horariocierretxt.Name = "Horariocierretxt";
             this.Horariocierretxt.Size = new System.Drawing.Size(299, 20);
             this.Horariocierretxt.TabIndex = 8;
             // 
             // Numerodesalastxt
             // 
-            this.Numerodesalastxt.Location = new System.Drawing.Point(108, 132);
+            this.Numerodesalastxt.Location = new System.Drawing.Point(122, 132);
             this.Numerodesalastxt.Name = "Numerodesalastxt";
             this.Numerodesalastxt.Size = new System.Drawing.Size(299, 20);
             this.Numerodesalastxt.TabIndex = 9;
@@ -641,11 +667,13 @@
             // 
             // Localesconeseidentificadorlistbox
             // 
+            this.Localesconeseidentificadorlistbox.Font = new System.Drawing.Font("Lucida Fax", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Localesconeseidentificadorlistbox.FormattingEnabled = true;
             this.Localesconeseidentificadorlistbox.HorizontalScrollbar = true;
+            this.Localesconeseidentificadorlistbox.ItemHeight = 16;
             this.Localesconeseidentificadorlistbox.Location = new System.Drawing.Point(252, 132);
             this.Localesconeseidentificadorlistbox.Name = "Localesconeseidentificadorlistbox";
-            this.Localesconeseidentificadorlistbox.Size = new System.Drawing.Size(381, 186);
+            this.Localesconeseidentificadorlistbox.Size = new System.Drawing.Size(381, 180);
             this.Localesconeseidentificadorlistbox.TabIndex = 3;
             // 
             // Identificadordellocaltxt
@@ -700,11 +728,13 @@
             // 
             // Listboxdetodosloslocalesexistentes
             // 
+            this.Listboxdetodosloslocalesexistentes.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Listboxdetodosloslocalesexistentes.FormattingEnabled = true;
             this.Listboxdetodosloslocalesexistentes.HorizontalScrollbar = true;
+            this.Listboxdetodosloslocalesexistentes.ItemHeight = 15;
             this.Listboxdetodosloslocalesexistentes.Location = new System.Drawing.Point(170, 86);
             this.Listboxdetodosloslocalesexistentes.Name = "Listboxdetodosloslocalesexistentes";
-            this.Listboxdetodosloslocalesexistentes.Size = new System.Drawing.Size(474, 212);
+            this.Listboxdetodosloslocalesexistentes.Size = new System.Drawing.Size(474, 199);
             this.Listboxdetodosloslocalesexistentes.TabIndex = 1;
             // 
             // Labeldetodosloslocales
@@ -716,6 +746,26 @@
             this.Labeldetodosloslocales.Size = new System.Drawing.Size(212, 33);
             this.Labeldetodosloslocales.TabIndex = 0;
             this.Labeldetodosloslocales.Text = "Locales existentes";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(226, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(360, 26);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Bienvenido a tu organizador de locales";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Open Sans", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(269, 85);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(240, 26);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Universidad de los Andes";
             // 
             // Form1
             // 
@@ -734,6 +784,7 @@
             this.Paneldeopciones.ResumeLayout(false);
             this.Paneldeopciones.PerformLayout();
             this.Panelinicio.ResumeLayout(false);
+            this.Panelinicio.PerformLayout();
             this.Paneltienda.ResumeLayout(false);
             this.Paneltienda.PerformLayout();
             this.Panelrecreacional.ResumeLayout(false);
@@ -816,6 +867,8 @@
         private System.Windows.Forms.Button btnvolverainicio;
         private System.Windows.Forms.ListBox Listboxdetodosloslocalesexistentes;
         private System.Windows.Forms.Label Labeldetodosloslocales;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 
